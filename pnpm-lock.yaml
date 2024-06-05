@@ -36,9 +36,9 @@ importers:
       '@eslint/js':
         specifier: ^9.4.0
         version: 9.4.0
-      '@iconify-json/bxl':
+      '@iconify-json/logos':
         specifier: ^1.1.10
-        version: 1.1.10
+        version: 1.1.42
       '@iconify-json/lucide':
         specifier: ^1.1.189
         version: 1.1.189
@@ -652,8 +652,8 @@ packages:
     resolution: {integrity: sha512-d2CGZR2o7fS6sWB7DG/3a95bGKQyHMACZ5aW8qGkkqQpUoZV6C0X7Pc7l4ZNMZkfNBf4VWNe9E1jRsf0G146Ew==}
     engines: {node: '>=18.18'}
 
-  '@iconify-json/bxl@1.1.10':
-    resolution: {integrity: sha512-/+9L0XBI7vvP8tU2NVfqr45BjUndbTEaDuU6PERn9zKH0Rtsi9GDpaba7FY8PgA91ugGIpuwUPsFLCofkYreNg==}
+  '@iconify-json/logos@1.1.42':
+    resolution: {integrity: sha512-/f+frtPm3m3Z30oy8Pk+QqRDkbmAiIaWGPl5CmsCXm15MVfvw9a/V/gD7WzdyuSGAZcFuQaqbHXj92y/n+2ifg==}
 
   '@iconify-json/lucide@1.1.189':
     resolution: {integrity: sha512-XUmcSwfAhi4ctdbdxMikhy4avUjxSYePHBSyZiVHPPmbOPGM3KjDpP/UscZA49yPAmkFqvb6lUa3L1RHAOn0rQ==}
@@ -3678,7 +3678,7 @@ snapshots:
 
   '@humanwhocodes/retry@0.3.0': {}
 
-  '@iconify-json/bxl@1.1.10':
+  '@iconify-json/logos@1.1.42':
     dependencies:
       '@iconify/types': 2.0.0
 
