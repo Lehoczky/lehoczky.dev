@@ -3,7 +3,6 @@ import { Picture } from "astro:assets"
 import Layout from "@/layouts/Layout.astro"
 import meImage from "@/assets/images/me.jpeg"
 import Header from "@/components/Header.astro"
-import TechStackListItem from "@/components/TechStackListItem.vue"
 import TechStackList from "@/components/TechStackList.vue"
 ---
 
@@ -13,7 +12,7 @@ import TechStackList from "@/components/TechStackList.vue"
     <section class="container flex justify-between items-center py-20">
       <div>
         <h1 class="text-6xl mb-3">Zoltan Lehoczky</h1>
-        <div class="text-slate-400 text-xl max-w-lg">
+        <div class="text-neutral-400 text-xl max-w-lg">
           Frontend Developer with more than 6 years of professional experience.
         </div>
       </div>
@@ -24,11 +23,11 @@ import TechStackList from "@/components/TechStackList.vue"
         formats={["avif", "webp"]}
         loading={"eager"}
         alt={"My profile picture"}
-        class="rounded-full border-2 border-slate-800"
+        class="rounded-full border-2 border-neutral-800 animate-appear"
       />
     </section>
 
-    <section class="py-20 bg-slate-800 bg-opacity-50">
+    <section class="py-20 bg-neutral-800 bg-opacity-50">
       <div class="container">
         <h2 class="text-4xl text-green-500 mb-10">My Tech Stack</h2>
         <div>
@@ -61,7 +60,7 @@ import TechStackList from "@/components/TechStackList.vue"
     <h2 class="text-4xl text-green-500">Noteworthy Projects</h2>
   </section>
 
-  <section class="py-20 bg-slate-800 bg-opacity-50">
+  <section class="py-20 bg-neutral-800 bg-opacity-50">
     <div class="container">
       <h2 class="text-4xl text-green-500">I'm passionate about...</h2>
     </div>

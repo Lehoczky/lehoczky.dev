@@ -2,7 +2,7 @@
   <li class="list-item opacity-0">
     <a
       :href="href"
-      class="flex flex-col items-center justify-center gap-4 rounded-2xl border-2 border-slate-800 p-10 shadow-xl transition-colors duration-200 hover:border-green-500 hover:text-green-500"
+      class="flex flex-col items-center justify-center gap-4 rounded-2xl border-2 border-neutral-800 p-10 shadow-xl transition-colors duration-200 hover:border-green-500 hover:text-green-500"
     >
       <div class="text-[5rem]" :class="icon"></div>
       <div class="text-xl">{{ name }}</div>
