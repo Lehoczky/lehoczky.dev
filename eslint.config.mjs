@@ -1,4 +1,5 @@
 import js from "@eslint/js"
+import eslintConfigPrettier from "eslint-config-prettier"
 import eslintPluginAstro from "eslint-plugin-astro"
 import simpleImportSort from "eslint-plugin-simple-import-sort"
 import eslintPluginVue from "eslint-plugin-vue"
@@ -9,6 +10,7 @@ export default ts.config(
   ...ts.configs.recommended,
   ...eslintPluginVue.configs["flat/recommended"],
   ...eslintPluginAstro.configs["flat/recommended"],
+  eslintConfigPrettier,
   {
     plugins: {
       "simple-import-sort": simpleImportSort,

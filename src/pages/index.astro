@@ -3,7 +3,7 @@ import { Picture } from "astro:assets"
 import Layout from "@/layouts/Layout.astro"
 import meImage from "@/assets/images/me.jpeg"
 import Header from "@/components/Header.astro"
-import TechStackList from "@/components/TechStackList.vue"
+import TechStack from "@/components/TechStack.vue"
 ---
 
 <Layout>
@@ -11,7 +11,7 @@ import TechStackList from "@/components/TechStackList.vue"
   <main>
     <section class="container flex justify-between items-center py-20">
       <div>
-        <h1 class="text-6xl mb-3">Zoltan Lehoczky</h1>
+        <h1 class="text-6xl mb-4">Zoltan Lehoczky</h1>
         <div class="text-neutral-400 text-xl max-w-lg">
           Frontend Developer with more than 6 years of professional experience.
         </div>
@@ -28,31 +28,7 @@ import TechStackList from "@/components/TechStackList.vue"
     </section>
 
     <section class="py-20 bg-neutral-800 bg-opacity-50">
-      <div class="container">
-        <h2 class="text-4xl text-green-500 mb-10">My Tech Stack</h2>
-        <div>
-          <TechStackList
-            techs={[
-              { href: "/", name: "Vue", icon: "i-logos-vue" },
-              { href: "/", name: "Nuxt", icon: "i-logos-nuxt-icon" },
-              { href: "/", name: "Angular", icon: "i-logos-angular-icon" },
-              { href: "/", name: "React", icon: "i-logos-react" },
-              { href: "/", name: "Next.js", icon: "i-logos-nextjs-icon" },
-              { href: "/", name: "Nx", icon: "i-logos-nx" },
-              { href: "/", name: "Tailwind", icon: "i-logos-tailwindcss-icon" },
-              {
-                href: "/",
-                name: "TypeScript",
-                icon: "i-logos-typescript-icon",
-              },
-              { href: "/", name: "Vite", icon: "i-logos-vitejs" },
-              { href: "/", name: "Jest", icon: "i-logos-jest" },
-              { href: "/", name: "Playwright", icon: "i-logos-playwright" },
-              { href: "/", name: "Storybook", icon: "i-logos-storybook-icon" },
-            ]}
-          />
-        </div>
-      </div>
+      <TechStack client:load />
     </section>
   </main>
 
