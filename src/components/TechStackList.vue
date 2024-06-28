@@ -13,6 +13,6 @@
 import TechStackListItem from "./TechStackListItem.vue"
 
 defineProps<{
-  techs: Array<{ href: string; icon: string; name: string }>
+  techs: Array<{ href: string; icon: string; name: string; color?: string }>
 }>()
 </script>

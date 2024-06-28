@@ -20,49 +20,136 @@
       <Tabs.Content value="tab1">
         <TechStackList
           :techs="[
-            { href: '/', name: 'Vue', icon: 'i-logos-vue' },
-            { href: '/', name: 'Nuxt', icon: 'i-logos-nuxt-icon' },
-            { href: '/', name: 'Angular', icon: 'i-logos-angular-icon' },
-            { href: '/', name: 'React', icon: 'i-logos-react' },
-            { href: '/', name: 'Next.js', icon: 'i-logos-nextjs-icon' },
-            { href: '/', name: 'Nx', icon: 'i-logos-nx' },
-            { href: '/', name: 'Tailwind', icon: 'i-logos-tailwindcss-icon' },
+            { href: '/', name: 'Vue', icon: 'i-logos-vue', color: '#42b883' },
             {
               href: '/',
-              name: 'TpeScript',
-              icon: 'i-logos-typescript-icon',
+              name: 'Nuxt',
+              icon: 'i-logos-nuxt-icon',
+              color: '#00DC82',
             },
-            { href: '/', name: 'Vite', icon: 'i-logos-vitejs' },
-            { href: '/', name: 'Jest', icon: 'i-logos-jest' },
-            { href: '/', name: 'Playwright', icon: 'i-logos-playwright' },
-            { href: '/', name: 'Storybook', icon: 'i-logos-storybook-icon' },
+            {
+              href: '/',
+              name: 'Angular',
+              icon: 'i-logos-angular-icon',
+              color: '#fb2fc1',
+            },
+            {
+              href: '/',
+              name: 'React',
+              icon: 'i-logos-react',
+              color: '#00D8FF',
+            },
+            {
+              href: '/',
+              name: 'Next.js',
+              icon: 'i-logos-nextjs-icon',
+              color: '#ffffff',
+            },
+            { href: '/', name: 'Nx', icon: 'i-logos-nx', color: '#96D8E9' },
+            {
+              href: '/',
+              name: 'Tailwind',
+              icon: 'i-logos-tailwindcss-icon',
+              color: '#0ED7B5',
+            },
+            {
+              href: '/',
+              name: 'TypeScript',
+              icon: 'i-logos-typescript-icon',
+              color: '#3178C6',
+            },
+            {
+              href: '/',
+              name: 'Vite',
+              icon: 'i-logos-vitejs',
+              color: '#9665fe',
+            },
+            { href: '/', name: 'Jest', icon: 'i-logos-jest', color: '#ce5f7f' },
+            {
+              href: '/',
+              name: 'Playwright',
+              icon: 'i-logos-playwright',
+              color: '#2ead33',
+            },
+            {
+              href: '/',
+              name: 'Storybook',
+              icon: 'i-logos-storybook-icon',
+              color: '#ff4785',
+            },
           ]"
         />
       </Tabs.Content>
       <Tabs.Content value="tab2">
         <TechStackList
           :techs="[
-            { href: '/', name: 'Python', icon: 'i-logos-python' },
-            { href: '/', name: 'Flask', icon: 'i-logos-flask' },
-            { href: '/', name: 'Swagger', icon: 'i-logos-swagger' },
-            { href: '/', name: 'Node.js', icon: 'i-logos-nodejs-icon' },
-            { href: '/', name: 'Prisma', icon: 'i-logos-prisma' },
-            { href: '/', name: 'Postgresql', icon: 'i-logos-postgresql' },
+            {
+              href: '/',
+              name: 'Python',
+              icon: 'i-logos-python',
+              color: '#ffd545',
+            },
+            {
+              href: '/',
+              name: 'Flask',
+              icon: 'i-logos-flask',
+              color: '#ffffff',
+            },
+            {
+              href: '/',
+              name: 'Swagger',
+              icon: 'i-logos-swagger',
+              color: '#85ea2d',
+            },
+            {
+              href: '/',
+              name: 'Node.js',
+              icon: 'i-logos-nodejs-icon',
+              color: '#539e43',
+            },
+            {
+              href: '/',
+              name: 'Prisma',
+              icon: 'i-logos-prisma',
+              color: '#ffffff',
+            },
+            {
+              href: '/',
+              name: 'Postgresql',
+              icon: 'i-logos-postgresql',
+              color: '#336791',
+            },
           ]"
         />
       </Tabs.Content>
       <Tabs.Content value="tab3">
         <TechStackList
           :techs="[
-            { href: '/', name: 'Electron', icon: 'i-logos-electron' },
+            {
+              href: '/',
+              name: 'Electron',
+              icon: 'i-logos-electron',
+              color: '#47848f',
+            },
             {
               href: '/',
               name: 'GH Actions',
               icon: 'i-logos-github-actions',
+              color: '#85b3df',
             },
-            { href: '/', name: 'Docker', icon: 'i-logos-docker-icon' },
-            { href: '/', name: 'GraphQL', icon: 'i-logos-graphql' },
-            { href: '/', name: 'tRPC', icon: 'i-logos-trpc' },
+            {
+              href: '/',
+              name: 'Docker',
+              icon: 'i-logos-docker-icon',
+              color: '#2396ed',
+            },
+            {
+              href: '/',
+              name: 'GraphQL',
+              icon: 'i-logos-graphql',
+              color: '#e535ab',
+            },
+            { href: '/', name: 'tRPC', icon: 'i-logos-trpc', color: '#398ccb' },
           ]"
         />
       </Tabs.Content>
