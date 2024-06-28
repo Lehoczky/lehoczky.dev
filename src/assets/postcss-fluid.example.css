@@ -1,0 +1,9 @@
+/* Input */
+.fluid-typography {
+  font-size: fluid(1rem, 1.25rem, 40rem, 120rem);
+}
+
+/* Output */
+.fluid-typography {
+  font-size: clamp(1rem, 0.875rem + 0.3125vw, 1.25rem);
+}

@@ -1,10 +1,11 @@
 ---
 import { Picture } from "astro:assets"
+import { Code } from "astro:components"
 
 import aproScrape from "@/assets/images/apro-scrape.png"
 import meImage from "@/assets/images/me.jpeg"
-import postcssFluid from "@/assets/images/postcss-fluid.png"
 import szikraWeb from "@/assets/images/szikra-web.png"
+import postcssFluidExample from "@/assets/postcss-fluid.example.css?raw"
 import Header from "@/components/Header.astro"
 import IconDecapCMS from "@/components/Icons/IconDecapCMS.astro"
 import IconShadcnUI from "@/components/Icons/IconShadcnUI.astro"
@@ -32,6 +33,7 @@ import Layout from "@/layouts/Layout.astro"
         src={meImage}
         width={350}
         height={350}
+        quality={100}
         formats={["avif", "webp"]}
         loading={"eager"}
         alt={"My profile picture"}
@@ -140,12 +142,16 @@ import Layout from "@/layouts/Layout.astro"
       </ProjectContainer>
 
       <ProjectContainer>
-        <a href="https://github.com/Lehoczky/apro-scrape">
-          <Picture
-            src={postcssFluid}
-            loading={"lazy"}
-            alt={"A screenshot of my app, Apro Scrape"}
-            class="rounded-lg"
+        <a
+          href="https://github.com/Lehoczky/apro-scrape"
+          class="grid lg:min-h-[402px]"
+        >
+          <Code
+            class="p-4 border border-neutral-800 rounded-lg xl:text-lg"
+            code={postcssFluidExample}
+            lang={"css"}
+            theme={"vitesse-dark"}
+            wrap
           />
         </a>
 
