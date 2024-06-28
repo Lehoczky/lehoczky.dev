@@ -6,6 +6,7 @@ import aproScrape from "@/assets/images/apro-scrape.png"
 import meImage from "@/assets/images/me.jpeg"
 import szikraWeb from "@/assets/images/szikra-web.png"
 import postcssFluidExample from "@/assets/postcss-fluid.example.css?raw"
+import BorderBeam from "@/components/BorderBeam.vue"
 import DotPattern from "@/components/DotPattern.vue"
 import Header from "@/components/Header.astro"
 import IconDecapCMS from "@/components/Icons/IconDecapCMS.astro"
@@ -30,7 +31,7 @@ import Layout from "@/layouts/Layout.astro"
       >
         <div>
           <h1 class="text-6xl mb-4">Zoltan Lehoczky</h1>
-          <div class="text-neutral-400 text-xl max-w-lg">
+          <div class="text-neutral-400 text-2xl max-w-lg">
             Frontend Developer with more than 6 years of professional
             experience.
           </div>
@@ -63,13 +64,22 @@ import Layout from "@/layouts/Layout.astro"
 
       <div class="grid gap-40">
         <ProjectContainer>
-          <a href="szikramozgalom.hu">
+          <a
+            class="relative rounded-lg overflow-hidden group"
+            href="szikramozgalom.hu"
+          >
             <Picture
               src={szikraWeb}
               formats={["avif", "webp"]}
               loading={"lazy"}
               alt={"A screenshot of the Szikra website"}
-              class="rounded-lg"
+            />
+            <BorderBeam
+              class="opacity-0 group-hover:opacity-100 transition-opacity duration-200 ease-in-out"
+            />
+            <BorderBeam
+              class="opacity-0 group-hover:opacity-100 transition-opacity duration-200 ease-in-out"
+              delay={4}
             />
           </a>
 
@@ -142,13 +152,22 @@ import Layout from "@/layouts/Layout.astro"
             </ProjectTechnologies>
           </ProjectTextContainer>
 
-          <a href="https://github.com/Lehoczky/apro-scrape">
+          <a
+            class="relative rounded-lg overflow-hidden group"
+            href="https://github.com/Lehoczky/apro-scrape"
+          >
             <Picture
               src={aproScrape}
               formats={["avif", "webp"]}
               loading={"lazy"}
               alt={"A screenshot of my app, Apro Scrape"}
-              class="rounded-lg"
+            />
+            <BorderBeam
+              class="opacity-0 group-hover:opacity-100 transition-opacity duration-200 ease-in-out"
+            />
+            <BorderBeam
+              class="opacity-0 group-hover:opacity-100 transition-opacity duration-200 ease-in-out"
+              delay={4}
             />
           </a>
         </ProjectContainer>
@@ -156,14 +175,21 @@ import Layout from "@/layouts/Layout.astro"
         <ProjectContainer>
           <a
             href="https://github.com/Lehoczky/apro-scrape"
-            class="grid lg:min-h-[402px]"
+            class="grid lg:min-h-[402px] relative rounded-lg overflow-hidden group"
           >
             <Code
-              class="p-4 border border-neutral-800 rounded-lg xl:text-lg"
+              class="p-6 border border-neutral-800 xl:text-lg rounded-lg"
               code={postcssFluidExample}
               lang={"css"}
               theme={"vitesse-dark"}
               wrap
+            />
+            <BorderBeam
+              class="opacity-0 group-hover:opacity-100 transition-opacity duration-200 ease-in-out"
+            />
+            <BorderBeam
+              class="opacity-0 group-hover:opacity-100 transition-opacity duration-200 ease-in-out"
+              delay={4}
             />
           </a>
 

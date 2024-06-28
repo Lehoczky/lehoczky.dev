@@ -11,6 +11,7 @@ export default {
     extend: {
       animation: {
         appear: "appear 300ms ease-out",
+        "border-beam": "border-beam calc(var(--duration)*1s) infinite linear",
       },
       keyframes: {
         appear: {
@@ -21,6 +22,11 @@ export default {
           "100%": {
             opacity: "1",
             transform: "scale(1)",
+          },
+        },
+        "border-beam": {
+          "100%": {
+            "offset-distance": "100%",
           },
         },
       },
