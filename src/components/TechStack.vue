@@ -1,20 +1,20 @@
 <template>
   <div class="container">
-    <h2 class="mb-10 text-4xl text-green-500">My Tech Stack</h2>
+    <SectionTitle>My Tech Stack</SectionTitle>
 
     <Tabs.Root default-value="tab1">
       <Tabs.List class="relative mb-6 flex shrink-0 gap-4">
         <Tabs.Indicator
-          class="absolute bottom-0 left-0 h-[2px] w-[--radix-tabs-indicator-size] translate-x-[--radix-tabs-indicator-position] rounded-full px-8 transition-[width,transform] duration-300"
+          class="absolute bottom-0 left-0 h-px w-[--radix-tabs-indicator-size] translate-x-[--radix-tabs-indicator-position] rounded-full px-8 transition-[width,transform] duration-300"
         >
           <div
-            class="absolute left-0 h-px w-[--radix-tabs-indicator-size] bg-green-300 transition-[width,transform] duration-300"
+            class="absolute left-0 h-0.5 w-[--radix-tabs-indicator-size] bg-green-300 transition-[width,transform] duration-300"
           />
         </Tabs.Indicator>
 
-        <Tabs.Trigger value="tab1" class="text-xl">Frontend</Tabs.Trigger>
-        <Tabs.Trigger value="tab2" class="text-xl">Backend</Tabs.Trigger>
-        <Tabs.Trigger value="tab3" class="text-xl">Others</Tabs.Trigger>
+        <Tabs.Trigger value="tab1" class="text-2xl">Frontend</Tabs.Trigger>
+        <Tabs.Trigger value="tab2" class="text-2xl">Backend</Tabs.Trigger>
+        <Tabs.Trigger value="tab3" class="text-2xl">Others</Tabs.Trigger>
       </Tabs.List>
 
       <Tabs.Content value="tab1">
@@ -73,5 +73,6 @@
 <script setup lang="ts">
 import { Tabs } from "radix-vue/namespaced"
 
+import SectionTitle from "./SectionTitle.vue"
 import TechStackList from "./TechStackList.vue"
 </script>
