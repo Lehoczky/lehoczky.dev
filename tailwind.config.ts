@@ -1,5 +1,5 @@
+import { getIconCollections, iconsPlugin } from "@egoist/tailwindcss-icons"
 import type { Config } from "tailwindcss"
-import { iconsPlugin, getIconCollections } from "@egoist/tailwindcss-icons"
 
 export default {
   content: ["./src/**/*.{astro,html,js,jsx,md,mdx,ts,tsx,vue}"],
@@ -28,7 +28,7 @@ export default {
   },
   plugins: [
     iconsPlugin({
-      collections: getIconCollections(["logos", "lucide"]),
+      collections: getIconCollections(["logos", "lucide", "bxl"]),
     }),
   ],
 } satisfies Config

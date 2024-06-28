@@ -1,9 +1,21 @@
 ---
 import { Picture } from "astro:assets"
-import Layout from "@/layouts/Layout.astro"
+
+import aproScrape from "@/assets/images/apro-scrape.png"
 import meImage from "@/assets/images/me.jpeg"
+import postcssFluid from "@/assets/images/postcss-fluid.png"
+import szikraWeb from "@/assets/images/szikra-web.png"
 import Header from "@/components/Header.astro"
+import IconDecapCMS from "@/components/Icons/IconDecapCMS.astro"
+import IconShadcnUI from "@/components/Icons/IconShadcnUI.astro"
+import Link from "@/components/Link.vue"
+import ProjectContainer from "@/components/Projects/ProjectContainer.astro"
+import ProjectDescription from "@/components/Projects/ProjectDescription.astro"
+import ProjectTechnologies from "@/components/Projects/ProjectTechnologies.astro"
+import ProjectTextContainer from "@/components/Projects/ProjectTextContainer.astro"
+import ProjectTitle from "@/components/Projects/ProjectTitle.astro"
 import TechStack from "@/components/TechStack.vue"
+import Layout from "@/layouts/Layout.astro"
 ---
 
 <Layout>
@@ -32,13 +44,151 @@ import TechStack from "@/components/TechStack.vue"
     </section>
   </main>
 
-  <section class="container flex justify-between items-center py-20">
-    <h2 class="text-4xl text-green-500">Noteworthy Projects</h2>
+  <section class="container py-20">
+    <h2 class="text-4xl text-green-500 mb-10">Noteworthy Projects</h2>
+
+    <div class="grid gap-40">
+      <ProjectContainer>
+        <a href="szikramozgalom.hu">
+          <Picture
+            src={szikraWeb}
+            formats={["avif", "webp"]}
+            loading={"lazy"}
+            alt={"A screenshot of the Szikra website"}
+            class="rounded-lg"
+          />
+        </a>
+
+        <ProjectTextContainer>
+          <div>
+            <ProjectTitle>Szikra Movement's website</ProjectTitle>
+            <ProjectDescription>
+              <p>
+                I'm the creator and maintainer of the <Link
+                  href="szikramozgalom.hu"
+                  class="text-green-500">Szikra Movement's website</Link
+                >.
+              </p>
+
+              <p>
+                The site was built to be as fast and as cost-effective as it can
+                be: it doesn't require any server at runtime, not even for the
+                CMS.
+                <Link href="https://jamstack.org/" class="text-green-500"
+                  >Jamstack</Link
+                > at its best.
+              </p>
+            </ProjectDescription>
+          </div>
+
+          <ProjectTechnologies>
+            <div class="i-logos-vue" title="Vue.js"></div>
+            <div class="i-logos-nuxt-icon" title="Nuxt.js"></div>
+            <div class="i-logos-netlify-icon" title="Netlify"></div>
+            <div class="i-logos-tailwindcss-icon" title="tailwindcss"></div>
+            <div class="text-pink-600" title="Decap CMS">
+              <IconDecapCMS />
+            </div>
+            <div title="shadcn UI">
+              <IconShadcnUI />
+            </div>
+            <div class="i-logos-typescript-icon" title="TypeScript"></div>
+          </ProjectTechnologies>
+        </ProjectTextContainer>
+      </ProjectContainer>
+
+      <ProjectContainer>
+        <ProjectTextContainer>
+          <div>
+            <ProjectTitle>Apro Scrape</ProjectTitle>
+            <ProjectDescription>
+              <p>
+                <Link
+                  href="https://github.com/Lehoczky/apro-scrape"
+                  class="text-green-500">Apro Scrape</Link
+                > is a web scraper for the hungarian <Link
+                  href="https://hardverapro.hu/index.html"
+                  class="text-green-500">hardverapro.hu</Link
+                > website, which was built to sell used hardware.
+              </p>
+
+              <p>
+                I originally built it when I was looking to buy a new phone and
+                got frustrated when every good deal was posted at the exact time
+                period when I didn't look at the site &gt;&lt;
+              </p>
+            </ProjectDescription>
+          </div>
+
+          <ProjectTechnologies>
+            <div class="i-logos-vue" title="Vue.js"></div>
+            <div class="i-logos-tailwindcss-icon" title="tailwindcss"></div>
+            <div class="i-logos-electron" title="Electron"></div>
+            <div class="i-logos-jsdom" title="JS DOM"></div>
+          </ProjectTechnologies>
+        </ProjectTextContainer>
+
+        <a href="https://github.com/Lehoczky/apro-scrape">
+          <Picture
+            src={aproScrape}
+            formats={["avif", "webp"]}
+            loading={"lazy"}
+            alt={"A screenshot of my app, Apro Scrape"}
+            class="rounded-lg"
+          />
+        </a>
+      </ProjectContainer>
+
+      <ProjectContainer>
+        <a href="https://github.com/Lehoczky/apro-scrape">
+          <Picture
+            src={postcssFluid}
+            loading={"lazy"}
+            alt={"A screenshot of my app, Apro Scrape"}
+            class="rounded-lg"
+          />
+        </a>
+
+        <ProjectTextContainer>
+          <div>
+            <ProjectTitle>PostCSS Fluid</ProjectTitle>
+            <ProjectDescription>
+              <p>
+                <Link
+                  href="https://github.com/Lehoczky/postcss-fluid"
+                  class="text-green-500">PostCSS Fluid</Link
+                > is a CSS plugin that lets you change the size of CSS units based
+                on the browser window's size without media queries.
+              </p>
+
+              <p>
+                It creates a linear interpolation between two values to achieve
+                a "fluid" change betwwen those values.
+              </p>
+              <p>
+                Here is my Demo site to check it out: <Link
+                  class="text-green-500"
+                  href="https://lehoczky.github.io/postcss-fluid/"
+                  >postcss-fluid | Demo</Link
+                >
+              </p>
+            </ProjectDescription>
+          </div>
+
+          <ProjectTechnologies>
+            <div class="i-logos-postcss" title="PostCSS"></div>
+            <div class="i-logos-nx" title="Nx"></div>
+            <div class="i-logos-typescript-icon" title="TypeScript"></div>
+            <div class="i-logos-jest" title="Jest"></div>
+          </ProjectTechnologies>
+        </ProjectTextContainer>
+      </ProjectContainer>
+    </div>
   </section>
 
   <section class="py-20 bg-neutral-800 bg-opacity-50">
     <div class="container">
-      <h2 class="text-4xl text-green-500">I'm passionate about...</h2>
+      <h2 class="text-4xl text-green-500 mb-10">I'm passionate about...</h2>
     </div>
   </section>
 </Layout>
