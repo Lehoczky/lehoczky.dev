@@ -8,7 +8,7 @@
       <slot></slot>
     </div>
     <div
-      class="blob absolute left-0 top-0 -z-10 size-64 rounded-full bg-neutral-100 bg-opacity-50 opacity-0 blur-2xl transition-all duration-300 ease-in-out"
+      class="blob absolute left-0 top-0 -z-10 size-64 rounded-full bg-neutral-500 bg-opacity-50 opacity-0 blur-2xl transition-all duration-300 ease-in-out"
     ></div>
     <div
       class="fake-blob invisible absolute left-0 top-0 -z-10 size-52 rounded-full"
