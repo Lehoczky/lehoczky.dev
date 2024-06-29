@@ -21,6 +21,15 @@ export default ts.config(
 
       "no-undef": "off",
       "@typescript-eslint/triple-slash-reference": "off",
+      "vue/multi-word-component-names": "off",
+    },
+  },
+  {
+    files: ["*.vue", "**/*.vue"],
+    languageOptions: {
+      parserOptions: {
+        parser: "@typescript-eslint/parser",
+      },
     },
   },
 )

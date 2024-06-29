@@ -9,16 +9,22 @@ import postcssFluidExample from "@/assets/postcss-fluid.example.css?raw"
 import BorderBeam from "@/components/BorderBeam.vue"
 import DotPattern from "@/components/DotPattern.vue"
 import Header from "@/components/Header.astro"
+import IconAccessibility from "@/components/Icons/IconAccessibility.vue"
+import IconAutomation from "@/components/Icons/IconAutomation.vue"
 import IconDecapCMS from "@/components/Icons/IconDecapCMS.astro"
+import IconPerformance from "@/components/Icons/IconPerformance.vue"
 import IconShadcnUI from "@/components/Icons/IconShadcnUI.astro"
+import IconTeaching from "@/components/Icons/IconTeaching.vue"
 import Link from "@/components/Link.vue"
+import PassionCard from "@/components/Passions/PassionCard.vue"
+import PassionCardGrid from "@/components/Passions/PassionCardGrid.vue"
 import ProjectContainer from "@/components/Projects/ProjectContainer.astro"
 import ProjectDescription from "@/components/Projects/ProjectDescription.astro"
 import ProjectTechnologies from "@/components/Projects/ProjectTechnologies.astro"
 import ProjectTextContainer from "@/components/Projects/ProjectTextContainer.astro"
 import ProjectTitle from "@/components/Projects/ProjectTitle.astro"
 import SectionTitle from "@/components/SectionTitle.vue"
-import TechStack from "@/components/TechStack.vue"
+import TechStack from "@/components/TechStack/TechStack.vue"
 import Layout from "@/layouts/Layout.astro"
 ---
 
@@ -49,11 +55,14 @@ import Layout from "@/layouts/Layout.astro"
       </section>
 
       <DotPattern
+        class="absolute top-0 left-0 w-1/2 h-1/2 [mask-image:linear-gradient(to_bottom_right,white,transparent,transparent)] translate-y-1 -z-40"
+      />
+      <DotPattern
         class="absolute bottom-0 right-0 w-1/3 h-full [mask-image:linear-gradient(to_bottom_right,transparent,transparent,white)] -z-40"
       />
     </div>
 
-    <section class="py-20 bg-neutral-800 bg-opacity-50 min-h-[60vh]">
+    <section class="py-20 bg-[#1e1e1e] min-h-[60vh]">
       <TechStack client:load />
     </section>
   </main>
@@ -235,9 +244,67 @@ import Layout from "@/layouts/Layout.astro"
     />
   </div>
 
-  <section class="py-20 bg-neutral-800 bg-opacity-50">
+  <section class="py-20 bg-[#1e1e1e]">
     <div class="container">
       <SectionTitle>I'm passionate about...</SectionTitle>
+
+      <PassionCardGrid>
+        <PassionCard>
+          <div class="grid justify-items-center min-w-44 gap-2">
+            <IconAccessibility class="text-9xl" />
+            <div class="text-3xl">Accessibility</div>
+          </div>
+
+          <div class="text-xl">
+            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quae,
+            possimus minima deserunt eos tempora nemo consequuntur atque dicta
+            eius expedita quos error! Autem illum architecto consectetur nisi
+            quaerat perspiciatis ex.
+          </div>
+        </PassionCard>
+
+        <PassionCard>
+          <div class="grid justify-items-center min-w-44 gap-2">
+            <IconAutomation  class="text-9xl"></IconAutomation>
+            <div class="text-3xl">Automation</div>
+          </div>
+
+          <div>
+            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quae,
+            possimus minima deserunt eos tempora nemo consequuntur atque dicta
+            eius expedita quos error! Autem illum architecto consectetur nisi
+            quaerat perspiciatis ex.
+          </div>
+        </PassionCard>
+
+        <PassionCard>
+          <div class="grid justify-items-center min-w-44 gap-2">
+            <IconPerformance class="text-9xl" />
+            <div class="text-3xl">Performance</div>
+          </div>
+
+          <div>
+            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quae,
+            possimus minima deserunt eos tempora nemo consequuntur atque dicta
+            eius expedita quos error! Autem illum architecto consectetur nisi
+            quaerat perspiciatis ex.
+          </div>
+        </PassionCard>
+
+        <PassionCard>
+          <div class="grid justify-items-center min-w-44 gap-2">
+            <IconTeaching class="text-9xl" />
+            <div class="text-3xl">Teaching</div>
+          </div>
+
+          <div>
+            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quae,
+            possimus minima deserunt eos tempora nemo consequuntur atque dicta
+            eius expedita quos error! Autem illum architecto consectetur nisi
+            quaerat perspiciatis ex.
+          </div>
+        </PassionCard>
+      </PassionCardGrid>
     </div>
   </section>
 </Layout>

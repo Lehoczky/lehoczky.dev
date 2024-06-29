@@ -28,18 +28,12 @@
 
 <script setup lang="ts">
 import { computed } from "vue"
-import BorderBeam from "./BorderBeam.vue"
 
-const props = withDefaults(
-  defineProps<{
-    href: string
-    name: string
-    icon: string
-    index: number
-    color?: string
-  }>(),
-  { color: "#22c55e" },
-)
+import type { Tech } from "@/types/tech"
+
+import BorderBeam from "../BorderBeam.vue"
+
+const props = withDefaults(defineProps<Tech>(), { color: "#22c55e" })
 
 const delay = computed(() => `${props.index * 50}ms`)
 </script>
