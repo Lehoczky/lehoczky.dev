@@ -115,3 +115,33 @@ import PassionTitle from "./PassionTitle.vue"
     </PassionCardGrid>
   </div>
 </section>
+
+<script>
+  const cardElements = document.querySelectorAll<HTMLElement>(".card")
+
+  window.addEventListener("mousemove", (event) => {
+    for (const card of cardElements) {
+      const blob = card.querySelector<HTMLElement>(".blob")
+      const fakeBlob = card.querySelector<HTMLElement>(".fake-blob")
+      if (!blob || !fakeBlob) {
+        continue
+      }
+
+      blob.style.opacity = "1"
+      const rec = fakeBlob.getBoundingClientRect()
+      const translateX = event.clientX - rec.left - rec.width / 2
+      const translateY = event.clientY - rec.top - rec.height / 2
+      blob.animate(
+        [
+          {
+            transform: `translate(${translateX}px,${translateY}px)`,
+          },
+        ],
+        {
+          duration: 300,
+          fill: "forwards",
+        },
+      )
+    }
+  })
+</script>
