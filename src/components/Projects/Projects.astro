@@ -25,7 +25,10 @@ import ProjectTitle from "./ProjectTitle.astro"
 
     <div class="grid gap-14 lg:gap-20 2xl:gap-40">
       <ProjectContainer>
-        <ProjectImageLink href="szikramozgalom.hu" class="order-2 lg:order-1">
+        <ProjectImageLink
+          href="szikramozgalom.hu"
+          class="order-2 xl:order-[unset]"
+        >
           <Picture
             class="w-full object-cover"
             src={szikraWeb}
@@ -118,7 +121,7 @@ import ProjectTitle from "./ProjectTitle.astro"
       <ProjectContainer>
         <ProjectImageLink
           href="https://github.com/Lehoczky/apro-scrape"
-          class="lg:min-h-[402px] order-2 lg:order-1"
+          class="lg:min-h-[402px] order-2 xl:order-[unset]"
         >
           <Code
             class="p-6 border border-neutral-800 xl:text-lg rounded-lg"

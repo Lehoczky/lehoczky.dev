@@ -1,7 +1,7 @@
 <template>
   <section class="min-h-[60vh] bg-[#1e1e1e] py-20">
     <div class="container">
-      <SectionTitle>My Tech Stack</SectionTitle>
+      <SectionTitle :id="SECTION_TITLE_ID">My Tech Stack</SectionTitle>
 
       <Tabs.Root default-value="tab1">
         <Tabs.List class="relative mb-6 flex shrink-0 gap-4">
@@ -28,6 +28,14 @@
           <TechStackList :techs="otherTechs" />
         </Tabs.Content>
       </Tabs.Root>
+
+      <button
+        class="mt-8 inline-flex w-full items-center justify-center gap-1 rounded-2xl border-2 border-green-500 px-6 py-3 text-xl font-semibold transition duration-200 hover:bg-green-500 hover:text-black sm:hidden"
+        @click="scrollToSectionTitle"
+      >
+        <span class="i-lucide-arrow-up text-2xl"></span>
+        <span> Back to Categories</span>
+      </button>
     </div>
   </section>
 </template>
@@ -166,4 +174,11 @@ const otherTechs: Tech[] = [
   },
   { href: "/", name: "tRPC", icon: "i-logos-trpc", color: "#398ccb" },
 ]
+
+const SECTION_TITLE_ID = "tech-stack"
+function scrollToSectionTitle() {
+  document
+    .getElementById(SECTION_TITLE_ID)
+    ?.scrollIntoView({ behavior: "smooth" })
+}
 </script>
