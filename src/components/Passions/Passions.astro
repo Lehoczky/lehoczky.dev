@@ -1,0 +1,117 @@
+---
+import IconAccessibility from "../Icons/IconAccessibility.vue"
+import IconAutomation from "../Icons/IconAutomation.vue"
+import IconPerformance from "../Icons/IconPerformance.vue"
+import IconTeaching from "../Icons/IconTeaching.vue"
+import Link from "../Link.vue"
+import SectionTitle from "../SectionTitle.vue"
+import PassionCard from "./PassionCard.vue"
+import PassionCardGrid from "./PassionCardGrid.vue"
+import PassionText from "./PassionText.vue"
+import PassionTitle from "./PassionTitle.vue"
+---
+
+<section class="py-20 bg-[#1e1e1e]">
+  <div class="container">
+    <SectionTitle>I'm passionate about...</SectionTitle>
+
+    <PassionCardGrid>
+      <PassionCard>
+        <div class="grid justify-items-center min-w-44 gap-2">
+          <IconAccessibility class="text-9xl" />
+          <PassionTitle>Accessibility</PassionTitle>
+        </div>
+
+        <PassionText>
+          <p>
+            An estimated <em class="font-semibold not-italic"
+              >16% of the global population has a significant disability</em
+            >.
+          </p>
+          <p>
+            I'm familiar with the <Link
+              class="text-green-500"
+              href="https://www.w3.org/WAI/standards-guidelines/aria/"
+              >WAI-ARIA Guidelines</Link
+            >, and automated accessibility tools like <Link
+              class="text-green-500"
+              href="https://www.deque.com/axe/devtools/">Axe</Link
+            > to create websites that can be used by everyone!
+          </p>
+        </PassionText>
+      </PassionCard>
+
+      <PassionCard>
+        <div class="grid justify-items-center min-w-44 gap-2">
+          <IconAutomation class="text-9xl" />
+          <PassionTitle>Automation</PassionTitle>
+        </div>
+
+        <PassionText>
+          <p>Doing the same things again and again can be frustrating.</p>
+
+          <p>
+            Because of this, I always lead initiatives to automate whatever
+            workflow we can. It can be about environent setups, code quality
+            checks, or even some browser automation scripts.
+          </p>
+        </PassionText>
+      </PassionCard>
+
+      <PassionCard>
+        <div class="grid justify-items-center min-w-44 gap-2">
+          <IconPerformance class="text-9xl" />
+          <PassionTitle>Performance</PassionTitle>
+        </div>
+
+        <PassionText>
+          <p>
+            Sites that load faster have greater pageviews per visit and lower
+            bounce rates. They are also better for the planet.
+          </p>
+          <Link>
+            That's why I'm familiar with code <Link
+              class="text-green-500"
+              href="https://medium.com/@raygunio/js-toolbox-2024-part-3-bundlers-and-test-frameworks-c60f55f26920"
+              >bundlers</Link
+            >, <Link
+              class="text-green-500"
+              href="https://developer.mozilla.org/en-US/docs/Glossary/Tree_shaking"
+              >tree-shaking</Link
+            > and web performance metrics like <Link
+              class="text-green-500"
+              href="https://web.dev/articles/lcp">LCP</Link
+            >, <Link class="text-green-500" href="https://web.dev/articles/cls"
+              >CLS</Link
+            >, <Link class="text-green-500" href="https://web.dev/articles/ttfb"
+              >TTFB</Link
+            >.
+          </Link>
+        </PassionText>
+      </PassionCard>
+
+      <PassionCard>
+        <div class="grid justify-items-center min-w-44 gap-2">
+          <IconTeaching class="text-9xl" />
+          <PassionTitle>Teaching</PassionTitle>
+        </div>
+
+        <PassionText>
+          <p>
+            I've done mentoring at every company where I've worked. I've helped
+            junior devs to learn frontend development, hosted training courses
+            and created presentations.
+          </p>
+          <p>
+            For example, you can view my talk at the Betsson Frontend Meetup
+            (2024) <Link
+              class="text-green-500"
+              href="https://www.youtube.com/watch?v=qTsK6F1zEnI&t=647s"
+              target="_blank">on YouTube</Link
+            >.
+          </p>
+        </PassionText>
+      </PassionCard>
+    </PassionCardGrid>
+  </div>
+</section>

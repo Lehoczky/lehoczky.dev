@@ -1,0 +1,170 @@
+---
+import { Code } from "astro/components"
+import Picture from "astro/components/Picture.astro"
+
+import aproScrape from "@/assets/images/apro-scrape.png"
+import szikraWeb from "@/assets/images/szikra-web.png"
+import postcssFluidExample from "@/assets/postcss-fluid.example.css?raw"
+
+import DotPattern from "../DotPattern.vue"
+import IconDecapCMS from "../Icons/IconDecapCMS.astro"
+import IconShadcnUI from "../Icons/IconShadcnUI.astro"
+import Link from "../Link.vue"
+import SectionTitle from "../SectionTitle.vue"
+import ProjectContainer from "./ProjectContainer.astro"
+import ProjectDescription from "./ProjectDescription.astro"
+import ProjectImageLink from "./ProjectImageLink.vue"
+import ProjectTechnologies from "./ProjectTechnologies.astro"
+import ProjectTextContainer from "./ProjectTextContainer.astro"
+import ProjectTitle from "./ProjectTitle.astro"
+---
+
+<div class="relative overflow-y-hidden">
+  <section class="container py-20">
+    <SectionTitle>Noteworthy Projects</SectionTitle>
+
+    <div class="grid gap-40">
+      <ProjectContainer>
+        <ProjectImageLink href="szikramozgalom.hu">
+          <Picture
+            src={szikraWeb}
+            formats={["avif", "webp"]}
+            loading={"lazy"}
+            alt={"A screenshot of the Szikra website"}
+          />
+        </ProjectImageLink>
+
+        <ProjectTextContainer>
+          <div>
+            <ProjectTitle>Szikra Movement's website</ProjectTitle>
+            <ProjectDescription>
+              <p>
+                I'm the creator and maintainer of the <Link
+                  href="szikramozgalom.hu"
+                  class="text-green-500">Szikra Movement's website</Link
+                >.
+              </p>
+
+              <p>
+                The site was built to be as fast and as cost-effective as it can
+                be: it doesn't require any server at runtime, not even for the
+                CMS.
+                <Link href="https://jamstack.org/" class="text-green-500"
+                  >Jamstack</Link
+                > at its best.
+              </p>
+            </ProjectDescription>
+          </div>
+
+          <ProjectTechnologies>
+            <div class="i-logos-vue" title="Vue.js"></div>
+            <div class="i-logos-nuxt-icon" title="Nuxt.js"></div>
+            <div class="i-logos-netlify-icon" title="Netlify"></div>
+            <div class="i-logos-tailwindcss-icon" title="tailwindcss"></div>
+            <div class="text-pink-600" title="Decap CMS">
+              <IconDecapCMS />
+            </div>
+            <div title="shadcn UI">
+              <IconShadcnUI />
+            </div>
+            <div class="i-logos-typescript-icon" title="TypeScript"></div>
+          </ProjectTechnologies>
+        </ProjectTextContainer>
+      </ProjectContainer>
+
+      <ProjectContainer>
+        <ProjectTextContainer>
+          <div>
+            <ProjectTitle>Apro Scrape</ProjectTitle>
+            <ProjectDescription>
+              <p>
+                <Link
+                  href="https://github.com/Lehoczky/apro-scrape"
+                  class="text-green-500">Apro Scrape</Link
+                > is a web scraper for the hungarian <Link
+                  href="https://hardverapro.hu/index.html"
+                  class="text-green-500">hardverapro.hu</Link
+                > website, which was built to sell used hardware.
+              </p>
+
+              <p>
+                I originally built it when I was looking to buy a new phone and
+                got frustrated when every good deal was posted at the exact time
+                period when I didn't look at the site &gt;&lt;
+              </p>
+            </ProjectDescription>
+          </div>
+
+          <ProjectTechnologies>
+            <div class="i-logos-vue" title="Vue.js"></div>
+            <div class="i-logos-tailwindcss-icon" title="tailwindcss"></div>
+            <div class="i-logos-electron" title="Electron"></div>
+            <div class="i-logos-jsdom" title="JS DOM"></div>
+          </ProjectTechnologies>
+        </ProjectTextContainer>
+
+        <ProjectImageLink href="https://github.com/Lehoczky/apro-scrape">
+          <Picture
+            src={aproScrape}
+            formats={["avif", "webp"]}
+            loading={"lazy"}
+            alt={"A screenshot of my app, Apro Scrape"}
+          />
+        </ProjectImageLink>
+      </ProjectContainer>
+
+      <ProjectContainer>
+        <ProjectImageLink
+          href="https://github.com/Lehoczky/apro-scrape"
+          class="lg:min-h-[402px]"
+        >
+          <Code
+            class="p-6 border border-neutral-800 xl:text-lg rounded-lg"
+            code={postcssFluidExample}
+            lang={"css"}
+            theme={"vitesse-dark"}
+            wrap
+          />
+        </ProjectImageLink>
+
+        <ProjectTextContainer>
+          <div>
+            <ProjectTitle>PostCSS Fluid</ProjectTitle>
+            <ProjectDescription>
+              <p>
+                <Link
+                  href="https://github.com/Lehoczky/postcss-fluid"
+                  class="text-green-500">PostCSS Fluid</Link
+                > is a CSS plugin that lets you change the size of CSS units based
+                on the browser window's size without media queries.
+              </p>
+
+              <p>
+                It creates a linear interpolation between two values to achieve
+                a "fluid" change betwwen those values.
+              </p>
+              <p>
+                Here is my Demo site to check it out: <Link
+                  class="text-green-500"
+                  href="https://lehoczky.github.io/postcss-fluid/"
+                  >postcss-fluid | Demo</Link
+                >
+              </p>
+            </ProjectDescription>
+          </div>
+
+          <ProjectTechnologies>
+            <div class="i-logos-postcss" title="PostCSS"></div>
+            <div class="i-logos-nx" title="Nx"></div>
+            <div class="i-logos-typescript-icon" title="TypeScript"></div>
+            <div class="i-logos-jest" title="Jest"></div>
+          </ProjectTechnologies>
+        </ProjectTextContainer>
+      </ProjectContainer>
+    </div>
+  </section>
+
+  <DotPattern
+    class="absolute top-0 left-0 w-2/5 h-full [mask-image:linear-gradient(to_bottom_right,white,transparent,transparent)] -z-40 -translate-y-1"
+  />
+</div>

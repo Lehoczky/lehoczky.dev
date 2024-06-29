@@ -33,7 +33,11 @@ import type { Tech } from "@/types/tech"
 
 import BorderBeam from "../BorderBeam.vue"
 
-const props = withDefaults(defineProps<Tech>(), { color: "#22c55e" })
+interface Props extends Tech {
+  index: number
+}
+
+const props = withDefaults(defineProps<Props>(), { color: "#22c55e" })
 
 const delay = computed(() => `${props.index * 50}ms`)
 </script>
