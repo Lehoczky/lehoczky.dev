@@ -1,3 +1,5 @@
 <template>
-  <h2 class="mb-16 text-5xl tracking-tighter text-green-500"><slot></slot></h2>
+  <h2 class="mb-10 text-5xl tracking-tighter text-green-500 lg:mb-12 xl:mb-16">
+    <slot></slot>
+  </h2>
 </template>

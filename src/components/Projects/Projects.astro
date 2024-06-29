@@ -23,10 +23,11 @@ import ProjectTitle from "./ProjectTitle.astro"
   <section class="container py-20">
     <SectionTitle>Noteworthy Projects</SectionTitle>
 
-    <div class="grid gap-40">
+    <div class="grid gap-14 lg:gap-20 2xl:gap-40">
       <ProjectContainer>
-        <ProjectImageLink href="szikramozgalom.hu">
+        <ProjectImageLink href="szikramozgalom.hu" class="order-2 lg:order-1">
           <Picture
+            class="w-full object-cover"
             src={szikraWeb}
             formats={["avif", "webp"]}
             loading={"lazy"}
@@ -90,7 +91,7 @@ import ProjectTitle from "./ProjectTitle.astro"
               <p>
                 I originally built it when I was looking to buy a new phone and
                 got frustrated when every good deal was posted at the exact time
-                period when I didn't look at the site &gt;&lt;
+                period when I didn't look at the site 😒
               </p>
             </ProjectDescription>
           </div>
@@ -106,6 +107,7 @@ import ProjectTitle from "./ProjectTitle.astro"
         <ProjectImageLink href="https://github.com/Lehoczky/apro-scrape">
           <Picture
             src={aproScrape}
+            class="w-full object-cover"
             formats={["avif", "webp"]}
             loading={"lazy"}
             alt={"A screenshot of my app, Apro Scrape"}
@@ -116,7 +118,7 @@ import ProjectTitle from "./ProjectTitle.astro"
       <ProjectContainer>
         <ProjectImageLink
           href="https://github.com/Lehoczky/apro-scrape"
-          class="lg:min-h-[402px]"
+          class="lg:min-h-[402px] order-2 lg:order-1"
         >
           <Code
             class="p-6 border border-neutral-800 xl:text-lg rounded-lg"
@@ -145,7 +147,7 @@ import ProjectTitle from "./ProjectTitle.astro"
               </p>
               <p>
                 Here is my Demo site to check it out: <Link
-                  class="text-green-500"
+                  class="text-green-500 inline-block"
                   href="https://lehoczky.github.io/postcss-fluid/"
                   >postcss-fluid | Demo</Link
                 >
