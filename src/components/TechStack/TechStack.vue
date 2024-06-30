@@ -49,59 +49,74 @@ import SectionTitle from "../SectionTitle.vue"
 import TechStackList from "./TechStackList.vue"
 
 const frontendTechs: Tech[] = [
-  { href: "/", name: "Vue", icon: "i-logos-vue", color: "#42b883" },
   {
-    href: "/",
+    href: "https://vuejs.org/",
+    name: "Vue",
+    icon: "i-logos-vue",
+    color: "#42b883",
+  },
+  {
+    href: "https://nuxt.com/",
     name: "Nuxt",
     icon: "i-logos-nuxt-icon",
     color: "#00DC82",
   },
   {
-    href: "/",
+    href: "https://angular.dev/",
     name: "Angular",
     icon: "i-logos-angular-icon",
     color: "#fb2fc1",
   },
   {
-    href: "/",
+    href: "https://react.dev/",
     name: "React",
     icon: "i-logos-react",
     color: "#00D8FF",
   },
   {
-    href: "/",
+    href: "https://nextjs.org/",
     name: "Next.js",
     icon: "i-logos-nextjs-icon",
     color: "#ffffff",
   },
-  { href: "/", name: "Nx", icon: "i-logos-nx", color: "#96D8E9" },
   {
-    href: "/",
+    href: "https://nx.dev/",
+    name: "Nx",
+    icon: "i-logos-nx",
+    color: "#96D8E9",
+  },
+  {
+    href: "https://tailwindcss.com/",
     name: "Tailwind",
     icon: "i-logos-tailwindcss-icon",
     color: "#0ED7B5",
   },
   {
-    href: "/",
+    href: "https://www.typescriptlang.org/",
     name: "TypeScript",
     icon: "i-logos-typescript-icon",
     color: "#4786cc",
   },
   {
-    href: "/",
+    href: "https://vitejs.dev/",
     name: "Vite",
     icon: "i-logos-vitejs",
     color: "#9665fe",
   },
-  { href: "/", name: "Jest", icon: "i-logos-jest", color: "#ce5f7f" },
   {
-    href: "/",
+    href: "https://jestjs.io/",
+    name: "Jest",
+    icon: "i-logos-jest",
+    color: "#ce5f7f",
+  },
+  {
+    href: "https://playwright.dev/",
     name: "Playwright",
     icon: "i-logos-playwright",
     color: "#2ead33",
   },
   {
-    href: "/",
+    href: "https://storybook.js.org/",
     name: "Storybook",
     icon: "i-logos-storybook-icon",
     color: "#ff4785",
@@ -110,37 +125,37 @@ const frontendTechs: Tech[] = [
 
 const backendTechs: Tech[] = [
   {
-    href: "/",
+    href: "https://www.python.org/",
     name: "Python",
     icon: "i-logos-python",
     color: "#ffd545",
   },
   {
-    href: "/",
+    href: "https://flask.palletsprojects.com/en/3.0.x/",
     name: "Flask",
     icon: "i-logos-flask",
     color: "#ffffff",
   },
   {
-    href: "/",
+    href: "https://swagger.io/",
     name: "Swagger",
     icon: "i-logos-swagger",
     color: "#85ea2d",
   },
   {
-    href: "/",
+    href: "https://nodejs.org/en",
     name: "Node.js",
     icon: "i-logos-nodejs-icon",
     color: "#539e43",
   },
   {
-    href: "/",
+    href: "https://www.prisma.io/",
     name: "Prisma",
     icon: "i-logos-prisma",
     color: "#ffffff",
   },
   {
-    href: "/",
+    href: "https://www.postgresql.org/",
     name: "Postgresql",
     icon: "i-logos-postgresql",
     color: "#336791",
@@ -149,30 +164,35 @@ const backendTechs: Tech[] = [
 
 const otherTechs: Tech[] = [
   {
-    href: "/",
+    href: "https://www.electronjs.org/",
     name: "Electron",
     icon: "i-logos-electron",
     color: "#47848f",
   },
   {
-    href: "/",
+    href: "https://docs.github.com/en/actions",
     name: "GH Actions",
     icon: "i-logos-github-actions",
     color: "#85b3df",
   },
   {
-    href: "/",
+    href: "https://www.docker.com/",
     name: "Docker",
     icon: "i-logos-docker-icon",
     color: "#2396ed",
   },
   {
-    href: "/",
+    href: "https://graphql.org/",
     name: "GraphQL",
     icon: "i-logos-graphql",
     color: "#e535ab",
   },
-  { href: "/", name: "tRPC", icon: "i-logos-trpc", color: "#398ccb" },
+  {
+    href: "https://trpc.io/",
+    name: "tRPC",
+    icon: "i-logos-trpc",
+    color: "#398ccb",
+  },
 ]
 
 const SECTION_TITLE_ID = "tech-stack"
