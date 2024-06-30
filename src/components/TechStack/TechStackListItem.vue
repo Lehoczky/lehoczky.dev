@@ -3,6 +3,7 @@
     <a
       :href="href"
       class="group flex flex-col items-center justify-center gap-4 rounded-2xl border-2 border-neutral-800 p-10 shadow-xl transition-colors duration-200 hover:text-[--color]"
+      target="_blank"
     >
       <div class="text-[5rem]" :class="icon"></div>
       <div class="text-xl">{{ name }}</div>
