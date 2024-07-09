@@ -10,33 +10,33 @@
     "format:fix": "prettier . --write --ignore-unknown"
   },
   "dependencies": {
-    "@astrojs/check": "^0.7.0",
+    "@astrojs/check": "^0.8.0",
     "@astrojs/tailwind": "^5.1.0",
     "@astrojs/vue": "^4.5.0",
-    "astro": "^4.11.1",
-    "radix-vue": "^1.8.5",
+    "astro": "^4.11.5",
+    "radix-vue": "^1.9.0",
     "tailwindcss": "^3.4.4",
-    "typescript": "^5.5.2",
-    "vue": "^3.4.30"
+    "typescript": "^5.5.3",
+    "vue": "^3.4.31"
   },
   "devDependencies": {
     "@egoist/tailwindcss-icons": "^1.8.1",
-    "@eslint/js": "^9.5.0",
+    "@eslint/js": "^9.6.0",
     "@iconify-json/bxl": "^1.1.10",
     "@iconify-json/logos": "^1.1.43",
-    "@iconify-json/lucide": "^1.1.195",
+    "@iconify-json/lucide": "^1.1.199",
     "@lehoczky/prettier-config": "^1.1.6",
     "@types/eslint__js": "^8.42.3",
-    "eslint": "^9.5.0",
+    "eslint": "^9.6.0",
     "eslint-config-prettier": "^9.1.0",
-    "eslint-plugin-astro": "^1.2.2",
-    "eslint-plugin-simple-import-sort": "^12.1.0",
-    "eslint-plugin-vue": "^9.26.0",
+    "eslint-plugin-astro": "^1.2.3",
+    "eslint-plugin-simple-import-sort": "^12.1.1",
+    "eslint-plugin-vue": "^9.27.0",
     "prettier": "^3.3.2",
     "prettier-plugin-astro": "^0.14.0",
     "prettier-plugin-tailwindcss": "^0.6.5",
     "sharp": "^0.33.4",
-    "typescript-eslint": "^7.14.1"
+    "typescript-eslint": "^7.16.0"
   },
-  "packageManager": "pnpm@9.4.0"
+  "packageManager": "pnpm@9.5.0"
 }
