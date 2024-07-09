@@ -5,7 +5,9 @@ import Link from "./Link.vue"
 <header
   class="shadow-lg border-b border-neutral-800 sticky top-0 backdrop-blur-lg bg-neutral-900 bg-opacity-80 z-40"
 >
-  <div class="container flex justify-between items-center h-20">
+  <div
+    class="container flex justify-between items-center h-20 transition-[height] duration-300 ease-out"
+  >
     <Link href="/" class="text-lg text-white tracking-widest">lehoczky.dev</Link
     >
 
@@ -29,3 +31,32 @@ import Link from "./Link.vue"
     </div>
   </div>
 </header>
+
+<style>
+  .scrolled > .container {
+    @apply !h-16;
+  }
+</style>
+
+<script>
+  import { bodyScrolledObserverElementId } from "@/constants"
+
+  const header = document.querySelector("header")
+  const intersectorElement = document.getElementById(
+    bodyScrolledObserverElementId,
+  )
+
+  const intersectionObserver = new IntersectionObserver((entries) => {
+    if (header) {
+      if (!entries[0].isIntersecting) {
+        header.classList.add("scrolled")
+      } else {
+        header.classList.remove("scrolled")
+      }
+    }
+  })
+
+  if (intersectorElement) {
+    intersectionObserver.observe(intersectorElement)
+  }
+</script>
