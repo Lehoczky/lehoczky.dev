@@ -1,9 +1,9 @@
 <template>
   <section class="min-h-[60vh] bg-[#1e1e1e] py-20">
     <div class="container">
-      <SectionTitle :id="SECTION_TITLE_ID">My Tech Stack</SectionTitle>
+      <SectionTitle ref="sectionTitle">My Tech Stack</SectionTitle>
 
-      <Tabs.Root default-value="tab1">
+      <Tabs.Root default-value="tab1" @update:model-value="tabChange">
         <Tabs.List class="relative mb-6 flex shrink-0 gap-4">
           <Tabs.Indicator
             class="absolute bottom-0 left-0 h-px w-[--radix-tabs-indicator-size] translate-x-[--radix-tabs-indicator-position] rounded-full px-8 transition-[width,transform] duration-300"
@@ -18,15 +18,21 @@
           <Tabs.Trigger value="tab3" class="text-2xl">Others</Tabs.Trigger>
         </Tabs.List>
 
-        <Tabs.Content value="tab1">
-          <TechStackList :techs="frontendTechs" />
-        </Tabs.Content>
-        <Tabs.Content value="tab2">
-          <TechStackList :techs="backendTechs" />
-        </Tabs.Content>
-        <Tabs.Content value="tab3">
-          <TechStackList :techs="otherTechs" />
-        </Tabs.Content>
+        <div
+          ref="transitionContainer"
+          class="transition-[height] duration-500"
+          @transitionend="tabTransitionEnd"
+        >
+          <Tabs.Content value="tab1">
+            <TechStackList :techs="frontendTechs" />
+          </Tabs.Content>
+          <Tabs.Content value="tab2">
+            <TechStackList :techs="backendTechs" />
+          </Tabs.Content>
+          <Tabs.Content value="tab3">
+            <TechStackList :techs="otherTechs" />
+          </Tabs.Content>
+        </div>
       </Tabs.Root>
 
       <button
@@ -42,6 +48,7 @@
 
 <script setup lang="ts">
 import { Tabs } from "radix-vue/namespaced"
+import { type ComponentPublicInstance, ref } from "vue"
 
 import type { Tech } from "@/types/tech"
 
@@ -195,10 +202,30 @@ const otherTechs: Tech[] = [
   },
 ]
 
-const SECTION_TITLE_ID = "tech-stack"
+const sectionTitle = ref<ComponentPublicInstance | undefined>()
 function scrollToSectionTitle() {
-  document
-    .getElementById(SECTION_TITLE_ID)
-    ?.scrollIntoView({ behavior: "smooth" })
+  sectionTitle.value?.$el.scrollIntoView({ behavior: "smooth" })
+}
+
+const transitionContainer = ref<HTMLElement | undefined>()
+async function tabChange() {
+  setTransitionContainerHeight(activeTabContentHeight())
+  requestAnimationFrame(() => {
+    setTransitionContainerHeight(activeTabContentHeight())
+  })
+}
+
+function setTransitionContainerHeight(height: string) {
+  transitionContainer.value!.style.height = height
+}
+
+function activeTabContentHeight() {
+  const selector = '[data-state="active"] > *'
+  const element = transitionContainer.value!.querySelector(selector)
+  return element!.clientHeight + "px"
+}
+
+function tabTransitionEnd() {
+  transitionContainer.value!.style.height = ""
 }
 </script>
