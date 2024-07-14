@@ -20,3 +20,25 @@ import Layout from "@/layouts/Layout.astro"
   </main>
   <Footer />
 </Layout>
+
+<script>
+  const sectionTitles = document.querySelectorAll("h2")
+  const observer = new IntersectionObserver(
+    (entries) => {
+      for (const entry of entries) {
+        if (entry.isIntersecting) {
+          entry.target.classList.remove("out")
+        } else {
+          entry.target.classList.add("out")
+        }
+      }
+    },
+    {
+      threshold: 1,
+    },
+  )
+
+  for (const title of sectionTitles) {
+    observer.observe(title)
+  }
+</script>
