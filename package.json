@@ -7,7 +7,8 @@
     "preview": "astro preview",
     "astro": "astro",
     "eslint:fix": "eslint . --max-warnings=0 --fix",
-    "format:fix": "prettier . --write --ignore-unknown"
+    "format:fix": "prettier . --write --ignore-unknown",
+    "lighthouse:check": "lhci autorun"
   },
   "dependencies": {
     "@astrojs/check": "^0.8.2",
@@ -26,6 +27,7 @@
     "@iconify-json/logos": "^1.1.43",
     "@iconify-json/lucide": "^1.1.200",
     "@lehoczky/prettier-config": "^1.1.6",
+    "@lhci/cli": "^0.14.0",
     "@types/eslint__js": "^8.42.3",
     "eslint": "^9.7.0",
     "eslint-config-prettier": "^9.1.0",
