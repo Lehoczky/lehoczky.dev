@@ -35,7 +35,7 @@ onMounted(() => {
         observer.unobserve(entry.target)
       }
     },
-    { threshold: 0.6 },
+    { threshold: window.screen.width < 1024 ? 0.05 : 0.6 },
   )
 
   if (root.value) {
