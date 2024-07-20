@@ -5,9 +5,11 @@
     "dev": "astro dev",
     "build": "astro check && astro build",
     "preview": "astro preview",
-    "astro": "astro",
+    "eslint:check": "eslint . --max-warnings=0",
     "eslint:fix": "eslint . --max-warnings=0 --fix",
+    "format:check": "prettier . --check --ignore-unknown",
     "format:fix": "prettier . --write --ignore-unknown",
+    "lint": "npm run format:check && npm run eslint:check",
     "lighthouse:check": "lhci autorun"
   },
   "dependencies": {
@@ -22,6 +24,7 @@
   },
   "devDependencies": {
     "@egoist/tailwindcss-icons": "^1.8.1",
+    "@eslint/compat": "^1.1.1",
     "@eslint/js": "^9.7.0",
     "@iconify-json/bxl": "^1.1.10",
     "@iconify-json/logos": "^1.1.43",

@@ -5,6 +5,5 @@
     "source.fixAll.eslint": "explicit",
     "source.fixAll.stylelint": "explicit"
   },
-  "css.customData": [".vscode/tailwind.json"],
-  "cSpell.words": ["astro", "astrojs", "iconify", "lucide"]
+  "css.customData": [".vscode/tailwind.json"]
 }
