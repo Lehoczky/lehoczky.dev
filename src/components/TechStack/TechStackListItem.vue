@@ -1,5 +1,5 @@
 <template>
-  <li class="relative list-item opacity-0">
+  <li class="relative opacity-0" :class="{ 'list-item': show }">
     <a
       :href="href"
       class="group flex flex-col items-center justify-center gap-4 rounded-2xl border-2 border-neutral-800 p-10 shadow-xl transition-colors duration-200 hover:text-[--color]"
@@ -35,6 +35,7 @@ import type { Tech } from "@/types/tech"
 import BorderBeam from "../BorderBeam.vue"
 
 interface Props extends Tech {
+  show: boolean
   index: number
 }
 
