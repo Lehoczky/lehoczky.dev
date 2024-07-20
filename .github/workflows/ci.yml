@@ -41,6 +41,12 @@ jobs:
       - name: Build the site 🏗
         run: pnpm build --site "${{ steps.pages.outputs.origin }}" --base "${{ steps.pages.outputs.base_path }}"
 
+      - name: Audit using Lighthouse ⚓
+        uses: treosh/lighthouse-ci-action@v12
+        with:
+          configPath: .github/lighthouserc.cjs
+          uploadArtifacts: true
+
       - name: Upload build artifacts
         if: github.ref == 'refs/heads/master'
         uses: actions/upload-pages-artifact@v3
