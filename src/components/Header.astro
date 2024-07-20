@@ -3,10 +3,10 @@ import Link from "./Link.vue"
 ---
 
 <header
-  class="shadow-lg border-b border-neutral-800 sticky top-0 backdrop-blur-lg bg-neutral-900 bg-opacity-80 z-40"
+  class="shadow-lg border-b transition-all duration-500 border-neutral-800 ease-out fixed top-0 backdrop-blur-lg bg-neutral-900 bg-opacity-90 z-40 w-full left-1/2 -translate-x-1/2"
 >
   <div
-    class="container flex justify-between items-center h-20 transition-[height] duration-300 ease-out"
+    class="container flex justify-between items-center h-20 transition-[height] duration-500 ease-out"
   >
     <Link href="/" class="text-lg text-white tracking-widest">lehoczky.dev</Link
     >
@@ -33,6 +33,10 @@ import Link from "./Link.vue"
 </header>
 
 <style>
+  .scrolled {
+    @apply w-[95%] translate-y-1 rounded-[2rem] sm:w-[theme('container.screens.sm')] md:w-[theme('container.screens.md')] lg:w-[theme('container.screens.lg')] xl:w-[theme('container.screens.xl')] 2xl:w-[theme('container.screens.2xl')];
+  }
+
   .scrolled > .container {
     @apply !h-16;
   }
