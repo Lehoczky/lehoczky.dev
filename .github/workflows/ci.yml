@@ -41,6 +41,11 @@ jobs:
       - name: Build the site 🏗
         run: pnpm build --site "${{ steps.pages.outputs.origin }}" --base "${{ steps.pages.outputs.base_path }}"
 
+      - name: run Lighthouse CI
+        run: pnpm lighthouse:check
+        env:
+          LHCI_GITHUB_APP_TOKEN: ${{ secrets.LHCI_GITHUB_APP_TOKEN }}
+
       - name: Upload build artifacts
         if: github.ref == 'refs/heads/master'
         uses: actions/upload-pages-artifact@v3
