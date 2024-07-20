@@ -43,9 +43,13 @@ jobs:
 
       - name: Audit using Lighthouse ⚓
         uses: treosh/lighthouse-ci-action@v12
+        id: lighthouse-audit
         with:
           configPath: .github/lighthouserc.cjs
           uploadArtifacts: true
+
+      - name: Show lighthouse results
+        run: echo "${{ toJson(steps.lighthouse-audit.outputs) }}"
 
       - name: Upload build artifacts
         if: github.ref == 'refs/heads/master'
