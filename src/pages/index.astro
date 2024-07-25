@@ -11,7 +11,7 @@ import Layout from "@/layouts/Layout.astro"
 
 <Layout>
   <Header />
-  <main class="overflow-x-hidden pt-16">
+  <main class="overflow-x-hidden">
     <div id={bodyScrolledObserverElementId} class="absolute top-0"></div>
     <Hero />
     <TechStack client:load />
@@ -28,14 +28,13 @@ import Layout from "@/layouts/Layout.astro"
       for (const entry of entries) {
         if (entry.isIntersecting) {
           entry.target.classList.remove("out")
-          observer.unobserve(entry.target)
         } else {
           entry.target.classList.add("out")
         }
       }
     },
     {
-      threshold: 0.4,
+      threshold: 1,
     },
   )
 
