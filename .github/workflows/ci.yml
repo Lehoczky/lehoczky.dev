@@ -14,10 +14,32 @@ concurrency:
   cancel-in-progress: true
 
 jobs:
+  changes:
+    name: Check which files have been changed
+    runs-on: ubuntu-latest
+    permissions:
+      pull-requests: read
+    outputs:
+      lint: ${{ steps.filter.outputs.lint }}
+      build: ${{ steps.filter.outputs.build }}
+      lighthouse: ${{ steps.filter.outputs.lighthouse }}
+    steps:
+      - name: Check out Git repository ⏬
+        uses: actions/checkout@v4
+
+      - name: Get changed file categories
+        uses: dorny/paths-filter@v3
+        id: filter
+        with:
+          filters: .github/file-filters.yaml
+
+      - name: Show change categroies
+        run: echo "${{ toJson(steps.filter.outputs) }}"
+
   ci:
     name: CI
+    needs: changes
     runs-on: ubuntu-latest
-
     steps:
       - name: Check out Git repository ⏬
         uses: actions/checkout@v4
@@ -35,32 +57,39 @@ jobs:
         run: pnpm install
 
       - name: Check lint errors 🧹
+        if: needs.changes.outputs.lint == 'true'
         run: pnpm lint
 
       - name: Setup Pages
+        if: needs.changes.outputs.build == 'true'
         id: pages
         uses: actions/configure-pages@v5
 
       - name: Build the site 🏗
+        if: needs.changes.outputs.build == 'true'
         run: pnpm build --site "${{ steps.pages.outputs.origin }}" --base "${{ steps.pages.outputs.base_path }}"
 
       - name: Check for broken links ⛓️‍💥
+        if: needs.changes.outputs.build == 'true'
         run: pnpm link:check
 
       - name: run Lighthouse CI
+        if: needs.changes.outputs.lighthouse == 'true'
         run: pnpm lighthouse:check
         env:
           LHCI_GITHUB_APP_TOKEN: ${{ secrets.LHCI_GITHUB_APP_TOKEN }}
 
       - name: Upload build artifacts
-        if: github.ref == 'refs/heads/master'
+        if: github.ref == 'refs/heads/master' && needs.changes.outputs.build == 'true'
         uses: actions/upload-pages-artifact@v3
         with:
           path: ./dist
 
   deploy:
-    if: github.ref == 'refs/heads/master'
-    needs: ci
+    if: github.ref == 'refs/heads/master' && needs.changes.outputs.build == 'true'
+    needs:
+      - ci
+      - changes
     permissions:
       pages: write # to deploy to Pages
       id-token: write # to verify the deployment originates from an appropriate source
