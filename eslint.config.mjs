@@ -13,6 +13,13 @@ const __filename = fileURLToPath(import.meta.url)
 const __dirname = path.dirname(__filename)
 const gitignorePath = path.resolve(__dirname, ".gitignore")
 
+console.log("hihilhihiohi")
+console.log("hihilhihiohi")
+console.log("hihilhihiohi")
+console.log("hihilhihiohi")
+
+console.log("hihilhihiohi")
+
 export default ts.config(
   includeIgnoreFile(gitignorePath),
   js.configs.recommended,

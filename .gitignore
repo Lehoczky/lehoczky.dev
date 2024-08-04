@@ -25,3 +25,8 @@ pnpm-debug.log*
 
 # Lighthouse check
 .lighthouseci
+
+
+
+.nx/cache
+.nx/workspace-data
