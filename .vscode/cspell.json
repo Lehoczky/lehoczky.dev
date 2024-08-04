@@ -1,5 +1,14 @@
 {
   "version": "0.2",
   "language": "en",
-  "words": ["astro", "astrojs", "iconify", "lucide", "lhci"]
+  "words": [
+    "astro",
+    "astrojs",
+    "autorun",
+    "compat",
+    "iconify",
+    "lhci",
+    "linkinator",
+    "lucide"
+  ]
 }

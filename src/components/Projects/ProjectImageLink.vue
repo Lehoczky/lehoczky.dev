@@ -16,7 +16,5 @@ import type { AnchorHTMLAttributes } from "vue"
 
 import BorderBeam from "../BorderBeam.vue"
 
-interface Props extends /* @vue-ignore */ AnchorHTMLAttributes {}
-
-defineProps<Props>()
+defineProps</* @vue-ignore */ AnchorHTMLAttributes>()
 </script>
