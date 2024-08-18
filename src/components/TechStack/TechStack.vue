@@ -1,7 +1,7 @@
 <template>
   <section class="min-h-[60vh] bg-[#1e1e1e] py-20">
     <div class="container">
-      <SectionTitle ref="sectionTitle">My Tech Stack</SectionTitle>
+      <SectionTitle>My Tech Stack</SectionTitle>
 
       <Tabs.Root default-value="tab1" @update:model-value="tabChange">
         <Tabs.List class="relative mb-6 flex shrink-0 gap-4">
@@ -34,21 +34,13 @@
           </Tabs.Content>
         </div>
       </Tabs.Root>
-
-      <button
-        class="mt-8 inline-flex w-full items-center justify-center gap-1 rounded-2xl border-2 border-green-500 px-6 py-3 text-xl font-semibold transition duration-200 hover:bg-green-500 hover:text-black sm:hidden"
-        @click="scrollToSectionTitle"
-      >
-        <span class="i-lucide-arrow-up text-2xl"></span>
-        <span> Back to Categories</span>
-      </button>
     </div>
   </section>
 </template>
 
 <script setup lang="ts">
 import { Tabs } from "radix-vue/namespaced"
-import { type ComponentPublicInstance, ref } from "vue"
+import { ref } from "vue"
 
 import type { Tech } from "@/types/tech"
 
@@ -201,11 +193,6 @@ const otherTechs: Tech[] = [
     color: "#398ccb",
   },
 ]
-
-const sectionTitle = ref<ComponentPublicInstance | undefined>()
-function scrollToSectionTitle() {
-  sectionTitle.value?.$el.scrollIntoView({ behavior: "smooth" })
-}
 
 const transitionContainer = ref<HTMLElement | undefined>()
 async function tabChange() {

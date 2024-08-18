@@ -2,10 +2,10 @@
   <li class="relative opacity-0" :class="{ 'list-item': show }">
     <a
       :href="href"
-      class="group flex flex-col items-center justify-center gap-4 rounded-2xl border-2 border-neutral-800 p-10 shadow-xl transition-colors duration-200 hover:text-[--color]"
+      class="group flex flex-col items-center justify-center gap-2 rounded-2xl border-2 border-neutral-800 p-8 shadow-xl transition duration-200 ease-out hover:scale-110 hover:text-[--color] hover:shadow-lg sm:gap-4 sm:p-10"
       target="_blank"
     >
-      <div class="text-[5rem]" :class="icon"></div>
+      <div class="text-[3.5rem] sm:text-[5rem]" :class="icon"></div>
       <div class="text-xl">{{ name }}</div>
 
       <BorderBeam
@@ -14,6 +14,7 @@
         :color-to="color"
         :color-from="color"
         :duration="4"
+        inset="-2px"
       />
       <BorderBeam
         class="opacity-0 transition-opacity duration-200 ease-in-out group-hover:opacity-100"
@@ -22,6 +23,7 @@
         :color-to="color"
         :color-from="color"
         :size="150"
+        inset="-2px"
       />
     </a>
   </li>

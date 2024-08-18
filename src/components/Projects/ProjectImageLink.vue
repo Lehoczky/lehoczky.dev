@@ -1,5 +1,8 @@
 <template>
-  <a class="group relative grid overflow-hidden rounded-lg" target="_blank">
+  <a
+    class="hover:scale-102 group relative grid overflow-hidden rounded-lg transition duration-200 ease-out will-change-transform xl:hover:scale-105"
+    target="_blank"
+  >
     <slot></slot>
     <BorderBeam
       class="opacity-0 transition-opacity duration-200 ease-in-out group-hover:opacity-100"

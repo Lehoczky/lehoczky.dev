@@ -18,6 +18,9 @@ export default {
       },
     },
     extend: {
+      scale: {
+        102: "1.02",
+      },
       animation: {
         appear: "appear 300ms ease-out",
         "border-beam": "border-beam calc(var(--duration)*1s) infinite linear",
