@@ -1,6 +1,6 @@
 <template>
   <a
-    class="group relative grid overflow-hidden rounded-lg transition duration-200 ease-out will-change-transform hover:scale-102 xl:hover:scale-105"
+    class="group relative grid overflow-hidden rounded-lg transition duration-700 ease-spring will-change-transform hover:scale-102 xl:hover:scale-105"
     target="_blank"
   >
     <slot></slot>
