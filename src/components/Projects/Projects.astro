@@ -23,23 +23,8 @@ import ProjectTitle from "./ProjectTitle.astro"
   <section class="container py-20">
     <SectionTitle>Noteworthy Projects</SectionTitle>
 
-    <div class="grid gap-14 lg:gap-24 2xl:gap-36">
+    <div class="grid gap-14 lg:gap-24 2xl:gap-36 project-grid">
       <ProjectContainer>
-        <div data-sal="slide-right" data-sal-duration="500">
-          <ProjectImageLink
-            href="https://szikramozgalom.hu/"
-            class="order-2 xl:order-[unset]"
-          >
-            <Picture
-              class="w-full object-cover"
-              src={szikraWeb}
-              formats={["avif", "webp"]}
-              loading={"lazy"}
-              alt={"A screenshot of the Szikra website"}
-            />
-          </ProjectImageLink>
-        </div>
-
         <ProjectTextContainer
           data-sal="slide-up"
           data-sal-duration="400"
@@ -78,6 +63,21 @@ import ProjectTitle from "./ProjectTitle.astro"
             <div title="shadcn UI"><IconShadcnUI /></div>
           </ProjectTechnologies>
         </ProjectTextContainer>
+
+        <div data-sal="slide-right" data-sal-duration="500">
+          <ProjectImageLink
+            href="https://szikramozgalom.hu/"
+            class="order-2 xl:order-[unset]"
+          >
+            <Picture
+              class="w-full object-cover"
+              src={szikraWeb}
+              formats={["avif", "webp"]}
+              loading={"lazy"}
+              alt={"A screenshot of the Szikra website"}
+            />
+          </ProjectImageLink>
+        </div>
       </ProjectContainer>
 
       <ProjectContainer>
@@ -132,21 +132,6 @@ import ProjectTitle from "./ProjectTitle.astro"
       </ProjectContainer>
 
       <ProjectContainer>
-        <div data-sal="slide-right" data-sal-duration="500">
-          <ProjectImageLink
-            href="https://github.com/Lehoczky/postcss-fluid"
-            class="lg:min-h-[402px] order-2 xl:order-[unset]"
-          >
-            <Code
-              class="p-6 border border-neutral-800 xl:text-lg rounded-lg"
-              code={postcssFluidExample}
-              lang={"css"}
-              theme={"dark-plus"}
-              wrap
-            />
-          </ProjectImageLink>
-        </div>
-
         <ProjectTextContainer
           data-sal="slide-up"
           data-sal-duration="400"
@@ -187,6 +172,21 @@ import ProjectTitle from "./ProjectTitle.astro"
             <div class="i-logos-astro-icon" title="Astro"></div>
           </ProjectTechnologies>
         </ProjectTextContainer>
+
+        <div data-sal="slide-right" data-sal-duration="500">
+          <ProjectImageLink
+            href="https://github.com/Lehoczky/postcss-fluid"
+            class="lg:min-h-[402px] order-2 xl:order-[unset]"
+          >
+            <Code
+              class="p-6 border border-neutral-800 xl:text-lg rounded-lg"
+              code={postcssFluidExample}
+              lang={"css"}
+              theme={"dark-plus"}
+              wrap
+            />
+          </ProjectImageLink>
+        </div>
       </ProjectContainer>
     </div>
   </section>
@@ -198,3 +198,12 @@ import ProjectTitle from "./ProjectTitle.astro"
     class="absolute bottom-0 right-0 w-1/5 h-1/2 [mask-image:linear-gradient(to_bottom_right,transparent,transparent,white)] -z-40"
   />
 </div>
+
+<style>
+  /* Alternate image and text position between rows */
+  @media screen(xl) {
+    .project-grid > :nth-child(odd) > :first-child {
+      order: 1;
+    }
+  }
+</style>
