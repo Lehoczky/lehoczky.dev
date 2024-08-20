@@ -1,12 +1,14 @@
+import "eslint-plugin-only-warn"
+
 import path from "node:path"
 import { fileURLToPath } from "node:url"
 
 import { includeIgnoreFile } from "@eslint/compat"
 import js from "@eslint/js"
-import eslintConfigPrettier from "eslint-config-prettier"
-import eslintPluginAstro from "eslint-plugin-astro"
+import configPrettier from "eslint-config-prettier"
+import astro from "eslint-plugin-astro"
 import simpleImportSort from "eslint-plugin-simple-import-sort"
-import eslintPluginVue from "eslint-plugin-vue"
+import vue from "eslint-plugin-vue"
 import ts from "typescript-eslint"
 
 const __filename = fileURLToPath(import.meta.url)
@@ -17,9 +19,9 @@ export default ts.config(
   includeIgnoreFile(gitignorePath),
   js.configs.recommended,
   ...ts.configs.recommended,
-  ...eslintPluginVue.configs["flat/recommended"],
-  ...eslintPluginAstro.configs["flat/recommended"],
-  eslintConfigPrettier,
+  ...vue.configs["flat/recommended"],
+  ...astro.configs["flat/recommended"],
+  configPrettier,
   {
     plugins: {
       "simple-import-sort": simpleImportSort,
@@ -30,7 +32,6 @@ export default ts.config(
 
       "no-undef": "off",
       "@typescript-eslint/triple-slash-reference": "off",
-      "vue/multi-word-component-names": "off",
     },
   },
   {
@@ -39,6 +40,9 @@ export default ts.config(
       parserOptions: {
         parser: "@typescript-eslint/parser",
       },
+    },
+    rules: {
+      "vue/multi-word-component-names": "off",
     },
   },
 )
