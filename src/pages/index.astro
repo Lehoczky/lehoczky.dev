@@ -4,6 +4,7 @@ import Header from "@/components/Header.astro"
 import Hero from "@/components/Hero/Hero.astro"
 import Passions from "@/components/Passions/Passions.astro"
 import Projects from "@/components/Projects/Projects.astro"
+import ScrollAnimation from "@/components/ScrollAnimation.astro"
 import TechStack from "@/components/TechStack/TechStack.vue"
 import { bodyScrolledObserverElementId } from "@/constants"
 import Layout from "@/layouts/Layout.astro"
@@ -11,7 +12,7 @@ import Layout from "@/layouts/Layout.astro"
 
 <Layout>
   <Header />
-  <main class="overflow-x-hidden">
+  <main>
     <div id={bodyScrolledObserverElementId} class="absolute top-0"></div>
     <Hero />
     <TechStack client:load />
@@ -19,6 +20,7 @@ import Layout from "@/layouts/Layout.astro"
     <Passions />
   </main>
   <Footer />
+  <ScrollAnimation />
 </Layout>
 
 <script>

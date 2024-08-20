@@ -19,46 +19,66 @@ import Link from "../Link.vue"
       loading={"eager"}
       alt={"My profile picture"}
       pictureAttributes={{ class: "" }}
-      class="rounded-full border-2 border-neutral-800 animate-appear w-[280px] sm:w-[340px]"
+      data-sal="zoom-in"
+      class="rounded-full border-2 border-neutral-800 w-[280px] sm:w-[340px]"
     />
 
     <div
       class="text-center lg:text-left flex flex-col items-center lg:items-start"
     >
-      <h1 class="text-6xl font-semibold mb-4">Zoltan Lehoczky</h1>
-      <div class="text-neutral-400 text-2xl max-w-lg mb-8">
+      <h1
+        class="text-6xl font-semibold mb-4"
+        data-sal="slide-up"
+        data-sal-duration="700"
+      >
+        Zoltan Lehoczky
+      </h1>
+      <div
+        class="text-neutral-400 text-2xl max-w-lg mb-8"
+        data-sal="slide-up"
+        data-sal-duration="500"
+        data-sal-delay="200"
+      >
         Frontend Developer with more than 6 years of professional experience.
       </div>
-      <div
+      <ul
         class="flex lg:flex-col lg:gap-x-1.5 lg:gap-y-1.5 items-start flex-wrap gap-x-6 gap-y-2 justify-center px-4 lg:px-0"
       >
-        <Link
-          href="https://github.com/Lehoczky"
-          aria-label="GitHub profile"
-          target="_blank"
-          class="flex items-center gap-3 text-lg"
-        >
-          <span class="i-bxl-github text-3xl"></span>
-          <span>Lehoczky</span>
-        </Link>
-        <Link
-          href="https://www.linkedin.com/in/zolt%C3%A1n-lehoczky-bb32aa188/"
-          aria-label="LinkedIn profile"
-          target="_blank"
-          class="flex items-center gap-3 text-lg"
-        >
-          <span class="i-bxl-linkedin text-3xl"></span>
-          <span>zoltán-lehoczky-bb32aa188</span>
-        </Link>
-        <Link
-          href="mailto:ifjlehoczkyzoltan@gmail.com"
-          target="_blank"
-          class="flex items-center gap-3 text-lg"
-        >
-          <span class="i-lucide-mail text-3xl"></span>
-          <span>ifjlehoczkyzoltan@gmail.com</span>
-        </Link>
-      </div>
+        <li data-sal="slide-up" data-sal-duration="500" data-sal-delay="300">
+          <Link
+            href="https://github.com/Lehoczky"
+            aria-label="GitHub profile"
+            target="_blank"
+            class="flex items-center gap-3 text-lg"
+          >
+            <span class="i-bxl-github text-3xl"></span>
+            <span>Lehoczky</span>
+          </Link>
+        </li>
+
+        <li data-sal="slide-up" data-sal-duration="500" data-sal-delay="350">
+          <Link
+            href="https://www.linkedin.com/in/zolt%C3%A1n-lehoczky-bb32aa188/"
+            aria-label="LinkedIn profile"
+            target="_blank"
+            class="flex items-center gap-3 text-lg"
+          >
+            <span class="i-bxl-linkedin text-3xl"></span>
+            <span>zoltán-lehoczky-bb32aa188</span>
+          </Link>
+        </li>
+
+        <li data-sal="slide-up" data-sal-duration="500" data-sal-delay="400">
+          <Link
+            href="mailto:ifjlehoczkyzoltan@gmail.com"
+            target="_blank"
+            class="flex items-center gap-3 text-lg"
+          >
+            <span class="i-lucide-mail text-3xl"></span>
+            <span>ifjlehoczkyzoltan@gmail.com</span>
+          </Link>
+        </li>
+      </ul>
     </div>
   </section>
 

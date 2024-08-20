@@ -1,1 +1,11 @@
-<h3 class="text-3xl mb-4 lg:mb-8"><slot /></h3>
+---
+import type { HTMLAttributes } from "astro/types"
+
+import { cn } from "@/libs/cn"
+
+type Props = HTMLAttributes<"h3">
+
+const { class: className, ...attrs } = Astro.props
+---
+
+<h3 class={cn("text-3xl mb-4 lg:mb-8", className)} {...attrs}><slot /></h3>

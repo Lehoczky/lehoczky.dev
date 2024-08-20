@@ -5,6 +5,7 @@
     "astro",
     "astrojs",
     "autorun",
+    "clsx",
     "compat",
     "iconify",
     "lhci",

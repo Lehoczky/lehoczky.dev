@@ -1,6 +1,8 @@
 <template>
   <div
     class="card group relative isolate grid overflow-hidden rounded-2xl bg-neutral-700 bg-opacity-20 p-0.5"
+    data-sal="slide-up"
+    data-sal-duration="700"
   >
     <div
       class="inner flex flex-col gap-8 rounded-2xl bg-neutral-800 p-6 transition-all duration-300 ease-in-out group-hover:bg-opacity-60 group-hover:backdrop-blur-3xl md:flex-row md:p-10"

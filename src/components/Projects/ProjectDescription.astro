@@ -1,1 +1,13 @@
-<div class="md:text-xl text-lg space-y-2"><slot /></div>
+---
+import type { HTMLAttributes } from "astro/types"
+
+import { cn } from "@/libs/cn"
+
+type Props = HTMLAttributes<"div">
+
+const { class: className, ...attrs } = Astro.props
+---
+
+<div class={cn("md:text-xl text-lg space-y-2", className)} {...attrs}>
+  <slot />
+</div>

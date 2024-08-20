@@ -19,26 +19,32 @@ import ProjectTextContainer from "./ProjectTextContainer.astro"
 import ProjectTitle from "./ProjectTitle.astro"
 ---
 
-<div class="relative overflow-y-hidden">
+<div class="relative overflow-hidden">
   <section class="container py-20">
     <SectionTitle>Noteworthy Projects</SectionTitle>
 
     <div class="grid gap-14 lg:gap-24 2xl:gap-36">
       <ProjectContainer>
-        <ProjectImageLink
-          href="https://szikramozgalom.hu/"
-          class="order-2 xl:order-[unset]"
-        >
-          <Picture
-            class="w-full object-cover"
-            src={szikraWeb}
-            formats={["avif", "webp"]}
-            loading={"lazy"}
-            alt={"A screenshot of the Szikra website"}
-          />
-        </ProjectImageLink>
+        <div data-sal="slide-right" data-sal-duration="500">
+          <ProjectImageLink
+            href="https://szikramozgalom.hu/"
+            class="order-2 xl:order-[unset]"
+          >
+            <Picture
+              class="w-full object-cover"
+              src={szikraWeb}
+              formats={["avif", "webp"]}
+              loading={"lazy"}
+              alt={"A screenshot of the Szikra website"}
+            />
+          </ProjectImageLink>
+        </div>
 
-        <ProjectTextContainer>
+        <ProjectTextContainer
+          data-sal="slide-up"
+          data-sal-duration="400"
+          data-sal-delay="200"
+        >
           <div>
             <ProjectTitle>Szikra Movement's website</ProjectTitle>
             <ProjectDescription>
@@ -80,7 +86,11 @@ import ProjectTitle from "./ProjectTitle.astro"
       </ProjectContainer>
 
       <ProjectContainer>
-        <ProjectTextContainer>
+        <ProjectTextContainer
+          data-sal="slide-up"
+          data-sal-duration="400"
+          data-sal-delay="200"
+        >
           <div>
             <ProjectTitle>Apro Scrape</ProjectTitle>
             <ProjectDescription>
@@ -112,32 +122,40 @@ import ProjectTitle from "./ProjectTitle.astro"
           </ProjectTechnologies>
         </ProjectTextContainer>
 
-        <ProjectImageLink href="https://github.com/Lehoczky/apro-scrape">
-          <Picture
-            src={aproScrape}
-            class="w-full object-cover"
-            formats={["avif", "webp"]}
-            loading={"lazy"}
-            alt={"A screenshot of my app, Apro Scrape"}
-          />
-        </ProjectImageLink>
+        <div data-sal="slide-left" data-sal-duration="500">
+          <ProjectImageLink href="https://github.com/Lehoczky/apro-scrape">
+            <Picture
+              src={aproScrape}
+              class="w-full object-cover"
+              formats={["avif", "webp"]}
+              loading={"lazy"}
+              alt={"A screenshot of my app, Apro Scrape"}
+            />
+          </ProjectImageLink>
+        </div>
       </ProjectContainer>
 
       <ProjectContainer>
-        <ProjectImageLink
-          href="https://github.com/Lehoczky/postcss-fluid"
-          class="lg:min-h-[402px] order-2 xl:order-[unset]"
-        >
-          <Code
-            class="p-6 border border-neutral-800 xl:text-lg rounded-lg"
-            code={postcssFluidExample}
-            lang={"css"}
-            theme={"dark-plus"}
-            wrap
-          />
-        </ProjectImageLink>
+        <div data-sal="slide-right" data-sal-duration="500">
+          <ProjectImageLink
+            href="https://github.com/Lehoczky/postcss-fluid"
+            class="lg:min-h-[402px] order-2 xl:order-[unset]"
+          >
+            <Code
+              class="p-6 border border-neutral-800 xl:text-lg rounded-lg"
+              code={postcssFluidExample}
+              lang={"css"}
+              theme={"dark-plus"}
+              wrap
+            />
+          </ProjectImageLink>
+        </div>
 
-        <ProjectTextContainer>
+        <ProjectTextContainer
+          data-sal="slide-up"
+          data-sal-duration="400"
+          data-sal-delay="200"
+        >
           <div>
             <ProjectTitle>PostCSS Fluid</ProjectTitle>
             <ProjectDescription>

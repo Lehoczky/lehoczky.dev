@@ -1,5 +1,5 @@
 <template>
-  <section class="min-h-[60vh] bg-[#1e1e1e] py-20">
+  <section class="min-h-[60vh] overflow-hidden bg-[#1e1e1e] py-20">
     <div class="container">
       <SectionTitle>My Tech Stack</SectionTitle>
 
@@ -13,9 +13,21 @@
             />
           </Tabs.Indicator>
 
-          <Tabs.Trigger value="tab1" class="text-2xl">Frontend</Tabs.Trigger>
-          <Tabs.Trigger value="tab2" class="text-2xl">Backend</Tabs.Trigger>
-          <Tabs.Trigger value="tab3" class="text-2xl">Others</Tabs.Trigger>
+          <Tabs.Trigger
+            value="tab1"
+            class="text-2xl transition duration-300 hover:text-green-300"
+            >Frontend</Tabs.Trigger
+          >
+          <Tabs.Trigger
+            value="tab2"
+            class="text-2xl transition duration-300 hover:text-green-300"
+            >Backend</Tabs.Trigger
+          >
+          <Tabs.Trigger
+            value="tab3"
+            class="text-2xl transition duration-300 hover:text-green-300"
+            >Others</Tabs.Trigger
+          >
         </Tabs.List>
 
         <div

@@ -1,3 +1,19 @@
-<div class="flex gap-4 mt-6 items-center text-4xl self-end flex-wrap">
+---
+import type { HTMLAttributes } from "astro/types"
+
+import { cn } from "@/libs/cn"
+
+type Props = HTMLAttributes<"div">
+
+const { class: className, ...attrs } = Astro.props
+---
+
+<div
+  class={cn(
+    "flex gap-4 mt-6 items-center text-4xl self-end flex-wrap",
+    className,
+  )}
+  {...attrs}
+>
   <slot />
 </div>
