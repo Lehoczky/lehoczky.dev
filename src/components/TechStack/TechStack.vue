@@ -15,19 +15,25 @@
 
           <Tabs.Trigger
             value="tab1"
-            class="text-2xl transition duration-300 hover:text-green-300"
-            >Frontend</Tabs.Trigger
+            class="flex items-center gap-1 text-2xl transition duration-300 hover:text-green-300"
           >
+            <div class="i-lucide-monitor hidden text-xl sm:block"></div>
+            <span>Frontend</span>
+          </Tabs.Trigger>
           <Tabs.Trigger
             value="tab2"
-            class="text-2xl transition duration-300 hover:text-green-300"
-            >Backend</Tabs.Trigger
+            class="flex items-center gap-1 text-2xl transition duration-300 hover:text-green-300"
           >
+            <div class="i-lucide-server hidden text-xl sm:block"></div>
+            <span>Backend</span>
+          </Tabs.Trigger>
           <Tabs.Trigger
             value="tab3"
-            class="text-2xl transition duration-300 hover:text-green-300"
-            >Others</Tabs.Trigger
+            class="flex items-center gap-1 text-2xl transition duration-300 hover:text-green-300"
           >
+            <IconNineDots class="hidden text-xl sm:block" />
+            <span>Others</span>
+          </Tabs.Trigger>
         </Tabs.List>
 
         <div
@@ -56,6 +62,7 @@ import { ref } from "vue"
 
 import type { Tech } from "@/types/tech"
 
+import IconNineDots from "../Icons/IconNineDots.vue"
 import SectionTitle from "../SectionTitle.vue"
 import TechStackList from "./TechStackList.vue"
 

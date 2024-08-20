@@ -7,8 +7,8 @@ import szikraWeb from "@/assets/images/szikra-web.png"
 import postcssFluidExample from "@/assets/postcss-fluid.example.css?raw"
 
 import DotPattern from "../DotPattern.vue"
-import IconDecapCMS from "../Icons/IconDecapCMS.astro"
-import IconShadcnUI from "../Icons/IconShadcnUI.astro"
+import IconDecapCMS from "../Icons/IconDecapCMS.vue"
+import IconShadcnUI from "../Icons/IconShadcnUI.vue"
 import Link from "../Link.vue"
 import SectionTitle from "../SectionTitle.vue"
 import ProjectContainer from "./ProjectContainer.astro"
@@ -70,17 +70,12 @@ import ProjectTitle from "./ProjectTitle.astro"
           </div>
 
           <ProjectTechnologies>
-            <div class="i-logos-vue" title="Vue.js"></div>
             <div class="i-logos-nuxt-icon" title="Nuxt.js"></div>
             <div class="i-logos-netlify-icon" title="Netlify"></div>
             <div class="i-logos-tailwindcss-icon" title="tailwindcss"></div>
-            <div class="text-pink-600" title="Decap CMS">
-              <IconDecapCMS />
-            </div>
-            <div title="shadcn UI">
-              <IconShadcnUI />
-            </div>
+            <div title="Decap CMS"><IconDecapCMS class="text-pink-600" /></div>
             <div class="i-logos-typescript-icon" title="TypeScript"></div>
+            <div title="shadcn UI"><IconShadcnUI /></div>
           </ProjectTechnologies>
         </ProjectTextContainer>
       </ProjectContainer>
@@ -118,6 +113,7 @@ import ProjectTitle from "./ProjectTitle.astro"
             <div class="i-logos-vue" title="Vue.js"></div>
             <div class="i-logos-tailwindcss-icon" title="tailwindcss"></div>
             <div class="i-logos-electron" title="Electron"></div>
+            <div class="i-logos-typescript-icon" title="TypeScript"></div>
             <div class="i-logos-jsdom" title="JS DOM"></div>
           </ProjectTechnologies>
         </ProjectTextContainer>
@@ -188,6 +184,7 @@ import ProjectTitle from "./ProjectTitle.astro"
             <div class="i-logos-nx" title="Nx"></div>
             <div class="i-logos-typescript-icon" title="TypeScript"></div>
             <div class="i-logos-jest" title="Jest"></div>
+            <div class="i-logos-astro-icon" title="Astro"></div>
           </ProjectTechnologies>
         </ProjectTextContainer>
       </ProjectContainer>
