@@ -17,9 +17,9 @@
     "@astrojs/check": "^0.9.3",
     "@astrojs/tailwind": "^5.1.0",
     "@astrojs/vue": "^4.5.0",
-    "astro": "^4.14.3",
+    "astro": "^4.15.1",
     "clsx": "^2.1.1",
-    "radix-vue": "^1.9.4",
+    "radix-vue": "^1.9.5",
     "sal.js": "^0.8.5",
     "tailwind-merge": "^2.5.2",
     "tailwindcss": "^3.4.10",
@@ -29,14 +29,14 @@
   "devDependencies": {
     "@egoist/tailwindcss-icons": "^1.8.1",
     "@eslint/compat": "^1.1.1",
-    "@eslint/js": "^9.9.0",
+    "@eslint/js": "^9.9.1",
     "@iconify-json/bxl": "^1.1.11",
     "@iconify-json/logos": "^1.1.44",
-    "@iconify-json/lucide": "^1.1.207",
+    "@iconify-json/lucide": "^1.1.209",
     "@lehoczky/prettier-config": "^1.1.7",
     "@lhci/cli": "^0.14.0",
     "@types/eslint__js": "^8.42.3",
-    "eslint": "^9.9.0",
+    "eslint": "^9.9.1",
     "eslint-config-prettier": "^9.1.0",
     "eslint-plugin-astro": "^1.2.3",
     "eslint-plugin-only-warn": "^1.1.0",
@@ -47,7 +47,7 @@
     "prettier-plugin-astro": "^0.14.1",
     "prettier-plugin-tailwindcss": "^0.6.6",
     "sharp": "^0.33.5",
-    "typescript-eslint": "^8.2.0"
+    "typescript-eslint": "^8.3.0"
   },
-  "packageManager": "pnpm@9.7.1"
+  "packageManager": "pnpm@9.9.0"
 }
