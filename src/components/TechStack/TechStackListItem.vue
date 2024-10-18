@@ -1,3 +1,20 @@
+<script setup lang="ts">
+import { computed } from "vue"
+
+import type { Tech } from "@/types/tech"
+
+import BorderBeam from "../BorderBeam.vue"
+
+interface Props extends Tech {
+  show: boolean
+  index: number
+}
+
+const props = withDefaults(defineProps<Props>(), { color: "#22c55e" })
+
+const delay = computed(() => `${props.index * 50}ms`)
+</script>
+
 <template>
   <li class="relative opacity-0" :class="{ 'list-item': show }">
     <a
@@ -28,23 +45,6 @@
     </a>
   </li>
 </template>
-
-<script setup lang="ts">
-import { computed } from "vue"
-
-import type { Tech } from "@/types/tech"
-
-import BorderBeam from "../BorderBeam.vue"
-
-interface Props extends Tech {
-  show: boolean
-  index: number
-}
-
-const props = withDefaults(defineProps<Props>(), { color: "#22c55e" })
-
-const delay = computed(() => `${props.index * 50}ms`)
-</script>
 
 <style scoped>
 .list-item {

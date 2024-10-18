@@ -7,7 +7,7 @@ export default {
   ...config,
   plugins: ["prettier-plugin-tailwindcss", "prettier-plugin-astro"],
   tailwindConfig: "./tailwind.config.ts",
-  tailwindFunctions: ["cn"],
+  tailwindFunctions: ["cn", "clsx"],
   overrides: [
     {
       files: "*.astro",

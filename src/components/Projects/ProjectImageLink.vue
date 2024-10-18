@@ -1,3 +1,11 @@
+<script setup lang="ts">
+import type { AnchorHTMLAttributes } from "vue"
+
+import BorderBeam from "../BorderBeam.vue"
+
+defineProps</* @vue-ignore */ AnchorHTMLAttributes>()
+</script>
+
 <template>
   <a
     class="group relative grid overflow-hidden rounded-lg transition duration-700 ease-spring will-change-transform hover:scale-102 xl:hover:scale-105"
@@ -13,11 +21,3 @@
     />
   </a>
 </template>
-
-<script setup lang="ts">
-import type { AnchorHTMLAttributes } from "vue"
-
-import BorderBeam from "../BorderBeam.vue"
-
-defineProps</* @vue-ignore */ AnchorHTMLAttributes>()
-</script>
