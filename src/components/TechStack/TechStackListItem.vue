@@ -19,14 +19,14 @@ const delay = computed(() => `${props.index * 50}ms`)
   <li class="relative opacity-0" :class="{ 'list-item': show }">
     <a
       :href="href"
-      class="group flex h-full flex-col items-center justify-center gap-2 rounded-2xl border-2 border-neutral-800 p-8 shadow-xl transition duration-700 ease-spring will-change-transform hover:scale-105 hover:text-[--color] hover:shadow-lg sm:gap-4 sm:p-10 sm:hover:scale-110"
+      class="group flex h-full flex-col items-center justify-center gap-2 rounded-2xl border-2 border-neutral-800 p-8 shadow-lg outline-none transition duration-700 ease-spring will-change-transform hocus:scale-105 hocus:text-[--color] hocus:shadow-sm sm:gap-4 sm:p-10 sm:hocus:scale-110"
       target="_blank"
     >
       <div class="text-[3.5rem] sm:text-[5rem]" :class="icon"></div>
       <div class="text-center text-lg sm:text-xl">{{ name }}</div>
 
       <BorderBeam
-        class="opacity-0 transition-opacity duration-200 ease-in-out group-hover:opacity-100"
+        class="opacity-0 transition-opacity duration-200 ease-in-out group-hocus:opacity-100"
         :size="150"
         :color-to="color"
         :color-from="color"
@@ -34,7 +34,7 @@ const delay = computed(() => `${props.index * 50}ms`)
         inset="-2px"
       />
       <BorderBeam
-        class="opacity-0 transition-opacity duration-200 ease-in-out group-hover:opacity-100"
+        class="opacity-0 transition-opacity duration-200 ease-in-out group-hocus:opacity-100"
         :duration="4"
         :delay="2"
         :color-to="color"

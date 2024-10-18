@@ -1,5 +1,6 @@
 import { getIconCollections, iconsPlugin } from "@egoist/tailwindcss-icons"
 import type { Config } from "tailwindcss"
+import plugin from "tailwindcss/plugin"
 
 export default {
   content: ["./src/**/*.{astro,html,js,jsx,md,mdx,ts,tsx,vue}"],
@@ -50,6 +51,10 @@ export default {
   plugins: [
     iconsPlugin({
       collections: getIconCollections(["logos", "lucide", "bxl"]),
+    }),
+    plugin(({ addVariant }) => {
+      addVariant("hocus", ["&:hover", "&:focus-visible"])
+      addVariant("group-hocus", [".group:hover &", ".group:focus-visible &"])
     }),
   ],
 } satisfies Config

@@ -1,5 +1,6 @@
 ---
-import Link from "./Link.vue"
+import Link from "../Link.vue"
+import HeaderLink from "./HeaderLink.astro"
 ---
 
 <header
@@ -12,22 +13,20 @@ import Link from "./Link.vue"
     >
 
     <div class="text-3xl leading-none flex gap-3">
-      <a
+      <HeaderLink
         href="https://github.com/Lehoczky"
         aria-label="GitHub profile"
-        class="hover:text-green-500 transition duration-700 hover:scale-125 ease-spring will-change-transform"
         target="_blank"
       >
         <span class="i-bxl-github"></span>
-      </a>
-      <a
+      </HeaderLink>
+      <HeaderLink
         href="https://www.linkedin.com/in/zolt%C3%A1n-lehoczky-bb32aa188/"
         aria-label="LinkedIn profile"
-        class="hover:text-green-500 transition duration-700 hover:scale-125 ease-spring will-change-transform"
         target="_blank"
       >
         <span class="i-bxl-linkedin"></span>
-      </a>
+      </HeaderLink>
     </div>
   </div>
 </header>

@@ -1,0 +1,19 @@
+---
+import type { HTMLAttributes } from "astro/types"
+
+import { cn } from "@/libs/cn"
+
+export interface Props extends HTMLAttributes<"a"> {}
+
+const { class: className, ...attrs } = Astro.props
+---
+
+<a
+  class={cn(
+    "hocus:text-green-500 transition duration-700 hocus:scale-125 ease-spring will-change-transform focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-green-500 focus-visible:ring-offset-0 focus-visible:ring-offset-neutral-900",
+    className,
+  )}
+  {...attrs}
+>
+  <slot />
+</a>
