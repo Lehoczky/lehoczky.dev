@@ -1,4 +1,14 @@
-<footer class="bg-neutral-950 py-10">
+---
+import type { HTMLAttributes } from "astro/types"
+
+import { cn } from "@/libs/cn"
+
+export interface Props extends HTMLAttributes<"footer"> {}
+
+const { class: className, ...attrs } = Astro.props
+---
+
+<footer class={cn("bg-neutral-950 py-10", className)} {...attrs}>
   <div class="container">
     Made with 💚 in Hungary using Astro, Vue, and TypeScript.
   </div>

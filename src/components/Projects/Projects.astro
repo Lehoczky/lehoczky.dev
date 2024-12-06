@@ -1,10 +1,12 @@
 ---
 import { Code } from "astro/components"
 import Picture from "astro/components/Picture.astro"
+import type { HTMLAttributes } from "astro/types"
 
 import aproScrape from "@/assets/images/apro-scrape.png"
 import szikraWeb from "@/assets/images/szikra-web.png"
 import postcssFluidExample from "@/assets/postcss-fluid.example.css?raw"
+import { cn } from "@/libs/cn"
 
 import DotPattern from "../DotPattern.vue"
 import IconDecapCMS from "../Icons/IconDecapCMS.vue"
@@ -17,9 +19,13 @@ import ProjectImageLink from "./ProjectImageLink.vue"
 import ProjectTechnologies from "./ProjectTechnologies.astro"
 import ProjectTextContainer from "./ProjectTextContainer.astro"
 import ProjectTitle from "./ProjectTitle.astro"
+
+export interface Props extends HTMLAttributes<"div"> {}
+
+const { class: className, ...attrs } = Astro.props
 ---
 
-<div class="relative overflow-hidden">
+<div class={cn("relative overflow-hidden", className)} {...attrs}>
   <section class="container py-20">
     <SectionTitle>Noteworthy Projects</SectionTitle>
 

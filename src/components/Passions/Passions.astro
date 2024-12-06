@@ -1,4 +1,8 @@
 ---
+import type { HTMLAttributes } from "astro/types"
+
+import { cn } from "@/libs/cn"
+
 import IconAccessibility from "../Icons/IconAccessibility.vue"
 import IconAutomation from "../Icons/IconAutomation.vue"
 import IconPerformance from "../Icons/IconPerformance.vue"
@@ -9,9 +13,13 @@ import PassionCard from "./PassionCard.vue"
 import PassionCardGrid from "./PassionCardGrid.vue"
 import PassionText from "./PassionText.vue"
 import PassionTitle from "./PassionTitle.vue"
+
+export interface Props extends HTMLAttributes<"section"> {}
+
+const { class: className, ...attrs } = Astro.props
 ---
 
-<section class="py-20 bg-[#1e1e1e]">
+<section class={cn("py-20 bg-[#1e1e1e]", className)} {...attrs}>
   <div class="container">
     <SectionTitle>I'm passionate about...</SectionTitle>
 

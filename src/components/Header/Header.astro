@@ -1,10 +1,22 @@
 ---
+import type { HTMLAttributes } from "astro/types"
+
+import { cn } from "@/libs/cn"
+
 import Link from "../Link.vue"
 import HeaderLink from "./HeaderLink.astro"
+
+export interface Props extends HTMLAttributes<"header"> {}
+
+const { class: className, ...attrs } = Astro.props
 ---
 
 <header
-  class="shadow-lg border-b border-neutral-800 sticky top-0 backdrop-blur-lg bg-neutral-900 bg-opacity-80 z-40"
+  class={cn(
+    "shadow-lg border-b border-neutral-800 sticky top-0 backdrop-blur-lg bg-neutral-900 bg-opacity-80 z-40",
+    className,
+  )}
+  {...attrs}
 >
   <div
     class="container flex justify-between items-center h-20 transition-[height] duration-300 ease-out"

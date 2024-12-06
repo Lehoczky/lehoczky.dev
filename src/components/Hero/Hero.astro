@@ -1,13 +1,19 @@
 ---
 import Picture from "astro/components/Picture.astro"
+import type { HTMLAttributes } from "astro/types"
 
 import meImage from "@/assets/images/me.jpeg"
+import { cn } from "@/libs/cn"
 
 import DotPattern from "../DotPattern.vue"
 import Link from "../Link.vue"
+
+export interface Props extends HTMLAttributes<"div"> {}
+
+const { class: className, ...attrs } = Astro.props
 ---
 
-<div class="relative">
+<div class={cn("relative", className)} {...attrs}>
   <section
     class="container flex-col lg:flex-row-reverse gap-6 flex justify-between items-center py-20 min-h-[80vh] relative"
   >
