@@ -3,8 +3,8 @@ import { Tabs } from "radix-vue/namespaced"
 import { ref } from "vue"
 
 import type { Tech } from "@/types/tech"
+import IconNineDots from "~icons/custom/nine-dots"
 
-import IconNineDots from "../Icons/IconNineDots.vue"
 import SectionTitle from "../SectionTitle.vue"
 import TechStackList from "./TechStackList.vue"
 

@@ -3,6 +3,7 @@
   "compilerOptions": {
     "jsx": "preserve",
     "baseUrl": ".",
+    "types": ["unplugin-icons/types/vue"],
     "paths": {
       "@/*": ["src/*"]
     }

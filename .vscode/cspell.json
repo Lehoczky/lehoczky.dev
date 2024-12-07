@@ -2,15 +2,20 @@
   "version": "0.2",
   "language": "en",
   "words": [
+    "apro",
     "astro",
     "astrojs",
     "autorun",
     "clsx",
     "compat",
+    "Decap",
     "iconify",
+    "jsdom",
     "knip",
     "lhci",
     "linkinator",
-    "lucide"
+    "lucide",
+    "Shadcn",
+    "szikra"
   ]
 }
