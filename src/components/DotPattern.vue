@@ -2,7 +2,7 @@
   <svg aria-hidden="true" class="pointer-events-none fill-neutral-600/80">
     <defs>
       <pattern
-        id="dotpatternId"
+        id="dotPatternId"
         patternUnits="userSpaceOnUse"
         patternContentUnits="userSpaceOnUse"
         width="16"
@@ -17,7 +17,7 @@
       width="100%"
       height="100%"
       stroke-width="0"
-      fill="url(#dotpatternId)"
+      fill="url(#dotPatternId)"
     ></rect>
   </svg>
 </template>

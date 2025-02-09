@@ -9,13 +9,18 @@
     "clsx",
     "compat",
     "Decap",
+    "hardverapro",
     "iconify",
     "jsdom",
     "knip",
     "lhci",
     "linkinator",
     "lucide",
+    "nextjs",
     "Shadcn",
-    "szikra"
+    "szikra",
+    "trpc",
+    "Vite",
+    "vitejs"
   ]
 }
