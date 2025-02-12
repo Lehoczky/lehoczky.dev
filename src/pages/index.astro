@@ -1,26 +1,16 @@
 ---
-import Footer from "@/components/Footer.astro"
-import Header from "@/components/Header/Header.astro"
 import Hero from "@/components/Hero/Hero.astro"
 import Passions from "@/components/Passions/Passions.astro"
 import Projects from "@/components/Projects/Projects.astro"
-import ScrollAnimationNoScript from "@/components/ScrollAnimationNoScript.astro"
 import TechStack from "@/components/TechStack/TechStack.vue"
-import { bodyScrolledObserverElementId } from "@/constants"
 import Layout from "@/layouts/Layout.astro"
 ---
 
 <Layout>
-  <Header />
-  <main>
-    <div id={bodyScrolledObserverElementId} class="absolute top-0"></div>
-    <Hero />
-    <TechStack client:load />
-    <Projects />
-    <Passions />
-  </main>
-  <Footer />
-  <ScrollAnimationNoScript />
+  <Hero />
+  <TechStack client:load />
+  <Projects />
+  <Passions />
 </Layout>
 
 <script>
