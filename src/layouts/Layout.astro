@@ -1,13 +1,17 @@
+---
+import Head from "@/components/Head.astro"
+
+const lang = "en-US"
+---
+
 <!doctype html>
-<html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="description" content="Zoltan Lehoczky's personal website" />
-    <meta name="viewport" content="width=device-width" />
-    <meta property="og:image" content="https://lehoczky.dev/og-image.jpeg" />
-    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-    <title>Zoltan Lehoczky | Frontend Web Dev</title>
-  </head>
+<html lang={lang}>
+  <Head
+    title="Zoltan Lehoczky | Frontend Web Dev"
+    description="Zoltan Lehoczky's personal website"
+    lang={lang}
+    ogImage="/og-image.png"
+  />
   <body class="bg-neutral-900 text-neutral-300">
     <slot />
   </body>
