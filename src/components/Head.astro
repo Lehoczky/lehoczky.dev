@@ -1,4 +1,8 @@
 ---
+import { Schema } from "astro-seo-schema"
+
+import { MY_GITHUB, MY_LINKEDIN } from "@/constants"
+
 interface Props {
   title: string
   description: string
@@ -11,6 +15,7 @@ const { title, description, lang, ogImage } = Astro.props
 const pageUrl = new URL(Astro.url.pathname, Astro.site).href
 const ogLocale = lang.replace("-", "_")
 const ogImageUrl = new URL(ogImage, Astro.site).href
+const schemaOrgImageUrl = new URL("schema-org-image.jpeg", Astro.site).href
 ---
 
 <head>
@@ -34,4 +39,18 @@ const ogImageUrl = new URL(ogImage, Astro.site).href
   <meta property="twitter:title" content={title} />
   <meta property="twitter:description" content={description} />
   <meta property="twitter:image" content={ogImageUrl} />
+
+  <Schema
+    item={{
+      "@context": "https://schema.org",
+      "@type": "Person",
+      name: "Zoltan Lehoczky",
+      gender: "male",
+      nationality: "Hungarian",
+      jobTitle: "Software Engineer",
+      image: schemaOrgImageUrl,
+      url: Astro.site?.href,
+      sameAs: [MY_GITHUB, MY_LINKEDIN],
+    }}
+  />
 </head>

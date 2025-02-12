@@ -1,6 +1,7 @@
 ---
 import type { HTMLAttributes } from "astro/types"
 
+import { MY_GITHUB, MY_LINKEDIN } from "@/constants"
 import { cn } from "@/libs/cn"
 
 import Link from "../Link.vue"
@@ -25,15 +26,11 @@ const { class: className, ...attrs } = Astro.props
     >
 
     <div class="text-3xl leading-none flex gap-3">
-      <HeaderLink
-        href="https://github.com/Lehoczky"
-        aria-label="GitHub profile"
-        target="_blank"
-      >
+      <HeaderLink href={MY_GITHUB} aria-label="GitHub profile" target="_blank">
         <span class="i-bxl-github"></span>
       </HeaderLink>
       <HeaderLink
-        href="https://www.linkedin.com/in/zolt%C3%A1n-lehoczky-bb32aa188/"
+        href={MY_LINKEDIN}
         aria-label="LinkedIn profile"
         target="_blank"
       >
