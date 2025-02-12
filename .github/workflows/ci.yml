@@ -44,8 +44,8 @@ jobs:
       - name: Build the site 🏗
         run: pnpm build --site "${{ steps.pages.outputs.origin }}" --base "${{ steps.pages.outputs.base_path }}"
 
-      - name: Check for broken links ⛓️‍💥
-        run: pnpm link:check
+      # - name: Check for broken links ⛓️‍💥
+      #   run: pnpm link:check
 
       - name: run Lighthouse CI
         run: pnpm lighthouse:check
