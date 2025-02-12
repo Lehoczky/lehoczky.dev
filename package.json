@@ -18,7 +18,7 @@
     "@astrojs/check": "^0.9.4",
     "@astrojs/tailwind": "^5.1.5",
     "@astrojs/vue": "^5.0.6",
-    "astro": "^5.2.6",
+    "astro": "<5.2.6",
     "clsx": "^2.1.1",
     "radix-vue": "^1.9.13",
     "sal.js": "^0.8.5",
