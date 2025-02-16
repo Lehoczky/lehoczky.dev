@@ -9,7 +9,7 @@ const { class: className, ...attrs } = Astro.props
 ---
 
 <div
-  class={cn("grid xl:my-4 xl:max-w-lg xl:justify-self-center", className)}
+  class={cn("grid xl:max-w-xl xl:justify-self-center", className)}
   {...attrs}
 >
   <slot />
