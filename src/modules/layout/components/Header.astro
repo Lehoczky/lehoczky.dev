@@ -1,10 +1,10 @@
 ---
 import type { HTMLAttributes } from "astro/types"
 
-import { MY_GITHUB, MY_LINKEDIN } from "@/constants"
-import { cn } from "@/libs/cn"
+import Link from "@/modules/shared/components/Link.vue"
+import { MY_GITHUB, MY_LINKEDIN } from "@/modules/shared/constants"
+import { cn } from "@/modules/shared/libs/cn"
 
-import Link from "../Link.vue"
 import HeaderLink from "./HeaderLink.astro"
 
 export interface Props extends HTMLAttributes<"header"> {}
@@ -47,7 +47,7 @@ const { class: className, ...attrs } = Astro.props
 </style>
 
 <script>
-  import { bodyScrolledObserverElementId } from "@/constants"
+  import { bodyScrolledObserverElementId } from "../constants"
 
   const header = document.querySelector("header")
   const intersectorElement = document.getElementById(

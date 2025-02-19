@@ -1,9 +1,8 @@
 <script setup lang="ts">
 import { computed } from "vue"
 
-import type { Tech } from "@/types/tech"
-
-import BorderBeam from "../BorderBeam.vue"
+import BorderBeam from "@/modules/shared/components/BorderBeam.vue"
+import type { Tech } from "@/modules/tech-stack/types"
 
 interface Props extends Tech {
   show: boolean

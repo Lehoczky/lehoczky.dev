@@ -1,7 +1,7 @@
 <script setup lang="ts">
 import type { AnchorHTMLAttributes } from "vue"
 
-import BorderBeam from "../BorderBeam.vue"
+import BorderBeam from "@/modules/shared/components/BorderBeam.vue"
 
 defineProps</* @vue-ignore */ AnchorHTMLAttributes>()
 </script>

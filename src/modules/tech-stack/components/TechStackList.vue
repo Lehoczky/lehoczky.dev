@@ -1,7 +1,7 @@
 <script setup lang="ts">
 import { onMounted, ref } from "vue"
 
-import type { Tech } from "@/types/tech"
+import type { Tech } from "@/modules/tech-stack/types"
 
 import TechStackListItem from "./TechStackListItem.vue"
 

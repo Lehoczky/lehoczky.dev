@@ -3,10 +3,9 @@ import Picture from "astro/components/Picture.astro"
 import type { HTMLAttributes } from "astro/types"
 
 import meImage from "@/assets/images/me.jpeg"
-import { cn } from "@/libs/cn"
-
-import DotPattern from "../DotPattern.vue"
-import Link from "../Link.vue"
+import DotPattern from "@/modules/shared/components/DotPattern.vue"
+import Link from "@/modules/shared/components/Link.vue"
+import { cn } from "@/modules/shared/libs/cn"
 
 export interface Props extends HTMLAttributes<"div"> {}
 

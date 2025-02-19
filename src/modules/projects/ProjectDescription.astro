@@ -1,16 +1,13 @@
 ---
 import type { HTMLAttributes } from "astro/types"
 
-import { cn } from "@/libs/cn"
+import { cn } from "@/modules/shared/libs/cn"
 
 type Props = HTMLAttributes<"div">
 
 const { class: className, ...attrs } = Astro.props
 ---
 
-<div
-  class={cn("grid xl:max-w-xl xl:justify-self-center", className)}
-  {...attrs}
->
+<div class={cn("md:text-xl text-lg space-y-2", className)} {...attrs}>
   <slot />
 </div>

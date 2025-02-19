@@ -2,11 +2,11 @@
 import { Tabs } from "radix-vue/namespaced"
 import { ref } from "vue"
 
-import type { Tech } from "@/types/tech"
+import SectionTitle from "@/modules/shared/components/SectionTitle.vue"
+import type { Tech } from "@/modules/tech-stack/types"
 import IconNineDots from "~icons/custom/nine-dots"
 
-import SectionTitle from "../SectionTitle.vue"
-import TechStackList from "./TechStackList.vue"
+import TechStackList from "./components/TechStackList.vue"
 
 const frontendTechs: Tech[] = [
   {
