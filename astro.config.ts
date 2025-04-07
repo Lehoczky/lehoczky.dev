@@ -7,7 +7,12 @@ import Icons from "unplugin-icons/vite"
 // https://astro.build/config
 export default defineConfig({
   site: "https://lehoczky.dev/",
-  integrations: [vue(), tailwind()],
+  integrations: [
+    vue(),
+    tailwind({
+      applyBaseStyles: false,
+    }),
+  ],
   vite: {
     plugins: [
       Icons({
