@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { Tabs } from "radix-vue/namespaced"
+import { Tabs } from "reka-ui/namespaced"
 import { ref } from "vue"
 
 import SectionTitle from "@/modules/shared/components/SectionTitle.vue"
@@ -186,10 +186,10 @@ function tabTransitionEnd() {
       <Tabs.Root default-value="tab1" @update:model-value="tabChange">
         <Tabs.List class="relative mb-6 flex shrink-0 gap-4">
           <Tabs.Indicator
-            class="absolute bottom-0 left-0 h-px w-[--radix-tabs-indicator-size] translate-x-[--radix-tabs-indicator-position] rounded-full px-8 transition-[width,transform] duration-300"
+            class="absolute bottom-0 left-0 h-px w-[--reka-tabs-indicator-size] translate-x-[--reka-tabs-indicator-position] rounded-full px-8 transition-[width,transform] duration-300"
           >
             <div
-              class="absolute left-0 h-0.5 w-[--radix-tabs-indicator-size] bg-green-500 transition-[width,transform] duration-300"
+              class="absolute left-0 h-0.5 w-[--reka-tabs-indicator-size] bg-green-500 transition-[width,transform] duration-300"
             />
           </Tabs.Indicator>
 
