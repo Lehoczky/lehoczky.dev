@@ -19,9 +19,9 @@ import TechStack from "@/modules/tech-stack/TechStack.vue"
     (entries) => {
       for (const entry of entries) {
         if (entry.isIntersecting) {
-          entry.target.classList.remove("out")
+          entry.target.removeAttribute("data-out")
         } else {
-          entry.target.classList.add("out")
+          entry.target.setAttribute("data-out", "")
         }
       }
     },

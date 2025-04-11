@@ -14,13 +14,13 @@ const { class: className, ...attrs } = Astro.props
 
 <header
   class={cn(
-    "shadow-lg border-b border-neutral-800 sticky top-0 backdrop-blur-lg bg-neutral-900 bg-opacity-80 z-40",
+    "shadow-lg border-b border-neutral-800 sticky top-0 backdrop-blur-lg bg-neutral-900 bg-opacity-80 z-40 group",
     className,
   )}
   {...attrs}
 >
   <div
-    class="container flex justify-between items-center h-20 transition-[height] duration-300 ease-out"
+    class="container group-data-[scrolled]:h-16 flex justify-between items-center h-20 transition-[height] duration-300 ease-out"
   >
     <Link href="/" class="text-lg text-white tracking-widest">lehoczky.dev</Link
     >
@@ -40,12 +40,6 @@ const { class: className, ...attrs } = Astro.props
   </div>
 </header>
 
-<style>
-  .scrolled > .container {
-    @apply !h-16;
-  }
-</style>
-
 <script>
   import { bodyScrolledObserverElementId } from "../constants"
 
@@ -57,9 +51,9 @@ const { class: className, ...attrs } = Astro.props
   const intersectionObserver = new IntersectionObserver((entries) => {
     if (header) {
       if (!entries[0].isIntersecting) {
-        header.classList.add("scrolled")
+        header.setAttribute("data-scrolled", "")
       } else {
-        header.classList.remove("scrolled")
+        header.removeAttribute("data-scrolled")
       }
     }
   })
