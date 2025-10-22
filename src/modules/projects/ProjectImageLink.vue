@@ -8,7 +8,7 @@ defineProps</* @vue-ignore */ AnchorHTMLAttributes>()
 
 <template>
   <a
-    class="group relative grid overflow-hidden rounded-lg transition duration-700 ease-spring will-change-transform focus-visible:outline-none hocus:scale-102 xl:hocus:scale-105"
+    class="group relative grid overflow-hidden rounded-lg transition duration-700 ease-spring will-change-transform focus-visible:outline-hidden hocus:scale-102 xl:hocus:scale-105"
     target="_blank"
   >
     <slot></slot>

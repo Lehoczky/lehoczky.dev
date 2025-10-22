@@ -10,7 +10,7 @@ const { class: className, ...attrs } = Astro.props
 
 <div
   class={cn(
-    "card group relative isolate grid overflow-hidden rounded-2xl bg-neutral-700 bg-opacity-20 p-0.5",
+    "card group relative isolate grid overflow-hidden rounded-2xl bg-neutral-700/20 p-0.5",
     className,
   )}
   data-sal="slide-up"
@@ -18,12 +18,12 @@ const { class: className, ...attrs } = Astro.props
   {...attrs}
 >
   <div
-    class="inner flex flex-col gap-8 rounded-2xl bg-neutral-800 p-6 transition-all duration-300 ease-in-out group-hover:bg-opacity-60 group-hover:backdrop-blur-3xl md:flex-row md:p-10"
+    class="inner flex flex-col gap-8 rounded-2xl bg-neutral-800 p-6 transition-all duration-300 ease-in-out group-hover:bg-neutral-800/60 group-hover:backdrop-blur-3xl md:flex-row md:p-10"
   >
     <slot />
   </div>
   <div
-    class="blob absolute left-0 top-0 -z-10 size-64 rounded-full bg-neutral-500 bg-opacity-50 opacity-0 blur-2xl transition-all duration-300 ease-in-out"
+    class="blob absolute left-0 top-0 -z-10 size-64 rounded-full bg-neutral-500/50 opacity-0 blur-2xl transition-all duration-300 ease-in-out"
   >
   </div>
   <div

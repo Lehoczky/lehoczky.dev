@@ -186,30 +186,30 @@ function tabTransitionEnd() {
       <Tabs.Root default-value="tab1" @update:model-value="tabChange">
         <Tabs.List class="relative mb-6 flex shrink-0 gap-4">
           <Tabs.Indicator
-            class="absolute bottom-0 left-0 h-px w-[--reka-tabs-indicator-size] translate-x-[--reka-tabs-indicator-position] rounded-full px-8 transition-[width,transform] duration-300"
+            class="absolute bottom-0 left-0 h-px w-(--reka-tabs-indicator-size) translate-x-(--reka-tabs-indicator-position) rounded-full px-8 transition-[width,translate] duration-300 ease-out"
           >
             <div
-              class="absolute left-0 h-0.5 w-[--reka-tabs-indicator-size] bg-green-500 transition-[width,transform] duration-300"
+              class="absolute left-0 h-0.5 w-(--reka-tabs-indicator-size) bg-green-500 transition-[width,translate] duration-300 ease-out"
             />
           </Tabs.Indicator>
 
           <Tabs.Trigger
             value="tab1"
-            class="flex items-center gap-1 rounded-sm text-2xl transition duration-300 hover:text-green-300 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-green-500 focus-visible:ring-offset-2 focus-visible:ring-offset-neutral-900"
+            class="flex items-center gap-1 rounded-xs text-2xl transition duration-300 hover:text-green-300 focus-visible:ring-2 focus-visible:ring-green-500 focus-visible:ring-offset-2 focus-visible:ring-offset-neutral-900 focus-visible:outline-hidden"
           >
             <div class="i-lucide-monitor hidden text-xl sm:block"></div>
             <span>Frontend</span>
           </Tabs.Trigger>
           <Tabs.Trigger
             value="tab2"
-            class="flex items-center gap-1 rounded-sm text-2xl transition duration-300 hover:text-green-300 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-green-500 focus-visible:ring-offset-2 focus-visible:ring-offset-neutral-900"
+            class="flex items-center gap-1 rounded-xs text-2xl transition duration-300 hover:text-green-300 focus-visible:ring-2 focus-visible:ring-green-500 focus-visible:ring-offset-2 focus-visible:ring-offset-neutral-900 focus-visible:outline-hidden"
           >
             <div class="i-lucide-server hidden text-xl sm:block"></div>
             <span>Backend</span>
           </Tabs.Trigger>
           <Tabs.Trigger
             value="tab3"
-            class="flex items-center gap-1 rounded-sm text-2xl transition duration-300 hover:text-green-300 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-green-500 focus-visible:ring-offset-2 focus-visible:ring-offset-neutral-900"
+            class="flex items-center gap-1 rounded-xs text-2xl transition duration-300 hover:text-green-300 focus-visible:ring-2 focus-visible:ring-green-500 focus-visible:ring-offset-2 focus-visible:ring-offset-neutral-900 focus-visible:outline-hidden"
           >
             <IconNineDots class="hidden text-xl sm:block" />
             <span>Others</span>
