@@ -19,13 +19,13 @@ export interface Props extends HTMLAttributes<"section"> {}
 const { class: className, ...attrs } = Astro.props
 ---
 
-<section class={cn("py-20 bg-[#1e1e1e]", className)} {...attrs}>
+<section class={cn("bg-[#1e1e1e] py-20", className)} {...attrs}>
   <div class="container">
     <SectionTitle>I'm passionate about...</SectionTitle>
 
     <PassionCardGrid>
       <PassionCard>
-        <div class="flex flex-col items-center md:min-w-44 gap-2">
+        <div class="flex flex-col items-center gap-2 md:min-w-44">
           <IconAccessibility class="text-9xl" />
           <PassionTitle>Accessibility</PassionTitle>
         </div>
@@ -51,7 +51,7 @@ const { class: className, ...attrs } = Astro.props
       </PassionCard>
 
       <PassionCard>
-        <div class="flex flex-col items-center min-w-44 gap-2">
+        <div class="flex min-w-44 flex-col items-center gap-2">
           <IconAutomation class="text-9xl" />
           <PassionTitle>Automation</PassionTitle>
         </div>
@@ -68,7 +68,7 @@ const { class: className, ...attrs } = Astro.props
       </PassionCard>
 
       <PassionCard>
-        <div class="flex flex-col items-center min-w-44 gap-2">
+        <div class="flex min-w-44 flex-col items-center gap-2">
           <IconPerformance class="text-9xl" />
           <PassionTitle>Performance</PassionTitle>
         </div>
@@ -105,7 +105,7 @@ const { class: className, ...attrs } = Astro.props
       </PassionCard>
 
       <PassionCard>
-        <div class="flex flex-col items-center min-w-44 gap-2">
+        <div class="flex min-w-44 flex-col items-center gap-2">
           <IconTeaching class="text-9xl" />
           <PassionTitle>Teaching</PassionTitle>
         </div>

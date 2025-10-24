@@ -1,21 +1,50 @@
-@import 'tailwindcss';
+@import "tailwindcss";
+@plugin "@egoist/tailwindcss-icons";
 
-@config '../../../tailwind.config.ts';
+@theme {
+  /* prettier-ignore */
+  --ease-spring: linear(0, 0.0022 0.41%, 0.0094, 0.0215, 0.0379 1.77%, 0.0853 2.73%, 0.1537 3.77%, 0.3063 5.63%, 0.646 9.27%, 0.7829, 0.9054 12.36%, 1.0067, 1.0886 15.36%, 1.121, 1.1486, 1.1717 17.54%, 1.1912, 1.206 19.09%, 1.2166 19.9%, 1.223 20.86%, 1.2234 21.86%, 1.2181 22.9%, 1.2064 24.04%, 1.1908 25.13%, 1.1701 26.31%, 1.0571 31.81%, 1.0302 33.26%, 1.0081 34.63%, 0.9867, 0.9703, 0.959 39.4%, 0.9523 41.03%, 0.9499 43.12%, 0.9537, 0.962 47.76%, 0.9869 53.17%, 0.9976 55.89%, 1.0059 58.89%, 1.0103 61.94%, 1.0104 66.8%, 1.0008 76.93%, 0.9979 82.39%, 1.0001 99.97%);
+}
 
-/*
-  The default border color has changed to `currentcolor` in Tailwind CSS v4,
-  so we've added these compatibility styles to make sure everything still
-  looks the same as it did with Tailwind CSS v3.
+@theme inline {
+  --animate-border-beam: border-beam calc(var(--duration) * 1s) infinite linear;
 
-  If we ever want to remove these styles, we need to add an explicit border
-  color utility to any element that depends on these defaults.
-*/
-@layer base {
-  *,
-  ::after,
-  ::before,
-  ::backdrop,
-  ::file-selector-button {
-    border-color: var(--color-gray-200, currentcolor);
+  @keyframes border-beam {
+    100% {
+      offset-distance: 100%;
+    }
+  }
+}
+
+@utility container {
+  width: 100%;
+  margin-inline: auto;
+  padding-inline: 2rem;
+
+  @media (width >= 40rem) {
+    max-width: 40rem;
+    padding-inline: 2rem;
+  }
+  @media (width >= 48rem) {
+    max-width: 48rem;
+  }
+  @media (width >= 64rem) {
+    max-width: 64rem;
+    padding-inline: 4rem;
+  }
+  @media (width >= 80rem) {
+    max-width: 80rem;
+    padding-inline: 5rem;
+  }
+  @media (width >= 96rem) {
+    max-width: 96rem;
+    padding-inline: 6rem;
+  }
+}
+
+@custom-variant hocus {
+  &:hover,
+  &:focus-visible {
+    @slot;
   }
 }

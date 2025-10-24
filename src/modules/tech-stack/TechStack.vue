@@ -195,21 +195,21 @@ function tabTransitionEnd() {
 
           <Tabs.Trigger
             value="tab1"
-            class="flex items-center gap-1 rounded-xs text-2xl transition duration-300 hover:text-green-300 focus-visible:ring-2 focus-visible:ring-green-500 focus-visible:ring-offset-2 focus-visible:ring-offset-neutral-900 focus-visible:outline-hidden"
+            class="flex cursor-pointer items-center gap-1 rounded-xs text-2xl transition duration-300 hover:text-green-300 focus-visible:ring-2 focus-visible:ring-green-500 focus-visible:ring-offset-2 focus-visible:ring-offset-neutral-900 focus-visible:outline-hidden"
           >
             <div class="i-lucide-monitor hidden text-xl sm:block"></div>
             <span>Frontend</span>
           </Tabs.Trigger>
           <Tabs.Trigger
             value="tab2"
-            class="flex items-center gap-1 rounded-xs text-2xl transition duration-300 hover:text-green-300 focus-visible:ring-2 focus-visible:ring-green-500 focus-visible:ring-offset-2 focus-visible:ring-offset-neutral-900 focus-visible:outline-hidden"
+            class="flex cursor-pointer items-center gap-1 rounded-xs text-2xl transition duration-300 hover:text-green-300 focus-visible:ring-2 focus-visible:ring-green-500 focus-visible:ring-offset-2 focus-visible:ring-offset-neutral-900 focus-visible:outline-hidden"
           >
             <div class="i-lucide-server hidden text-xl sm:block"></div>
             <span>Backend</span>
           </Tabs.Trigger>
           <Tabs.Trigger
             value="tab3"
-            class="flex items-center gap-1 rounded-xs text-2xl transition duration-300 hover:text-green-300 focus-visible:ring-2 focus-visible:ring-green-500 focus-visible:ring-offset-2 focus-visible:ring-offset-neutral-900 focus-visible:outline-hidden"
+            class="flex cursor-pointer items-center gap-1 rounded-xs text-2xl transition duration-300 hover:text-green-300 focus-visible:ring-2 focus-visible:ring-green-500 focus-visible:ring-offset-2 focus-visible:ring-offset-neutral-900 focus-visible:outline-hidden"
           >
             <IconNineDots class="hidden text-xl sm:block" />
             <span>Others</span>

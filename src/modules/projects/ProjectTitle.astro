@@ -8,4 +8,4 @@ type Props = HTMLAttributes<"h3">
 const { class: className, ...attrs } = Astro.props
 ---
 
-<h3 class={cn("text-3xl mb-4 lg:mb-8", className)} {...attrs}><slot /></h3>
+<h3 class={cn("mb-4 text-3xl lg:mb-8", className)} {...attrs}><slot /></h3>

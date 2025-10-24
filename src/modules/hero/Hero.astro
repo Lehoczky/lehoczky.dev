@@ -14,7 +14,7 @@ const { class: className, ...attrs } = Astro.props
 
 <div class={cn("relative", className)} {...attrs}>
   <section
-    class="container flex-col lg:flex-row-reverse gap-6 flex justify-between items-center py-20 min-h-[80vh] relative"
+    class="relative container flex min-h-[80vh] flex-col items-center justify-between gap-6 py-20 lg:flex-row-reverse"
   >
     <Picture
       src={meImage}
@@ -27,21 +27,21 @@ const { class: className, ...attrs } = Astro.props
       data-sal="zoom-in"
       data-sal-duration="300"
       data-sal-easing="ease-out-sine"
-      class="rounded-full border-2 border-neutral-800 w-[280px] sm:w-[340px]"
+      class="w-[280px] rounded-full border-2 border-neutral-800 sm:w-[340px]"
     />
 
     <div
-      class="text-center lg:text-left flex flex-col items-center lg:items-start"
+      class="flex flex-col items-center text-center lg:items-start lg:text-left"
     >
       <h1
-        class="text-6xl font-semibold mb-4"
+        class="mb-4 text-6xl font-semibold"
         data-sal="slide-up"
         data-sal-duration="700"
       >
         Zoltan Lehoczky
       </h1>
       <div
-        class="text-neutral-400 text-2xl max-w-lg mb-8"
+        class="mb-8 max-w-lg text-2xl text-neutral-400"
         data-sal="slide-up"
         data-sal-duration="500"
         data-sal-delay="200"
@@ -49,7 +49,7 @@ const { class: className, ...attrs } = Astro.props
         Frontend Developer with more than 6 years of professional experience.
       </div>
       <ul
-        class="flex lg:flex-col lg:gap-x-1.5 lg:gap-y-1.5 items-start flex-wrap gap-x-6 gap-y-2 justify-center px-4 lg:px-0"
+        class="flex flex-wrap items-start justify-center gap-x-6 gap-y-2 px-4 lg:flex-col lg:gap-x-1.5 lg:gap-y-1.5 lg:px-0"
       >
         <li data-sal="slide-up" data-sal-duration="500" data-sal-delay="300">
           <Link
@@ -90,9 +90,9 @@ const { class: className, ...attrs } = Astro.props
   </section>
 
   <DotPattern
-    class="absolute top-0 left-0 w-1/2 h-1/2 mask-[linear-gradient(to_bottom_right,white,transparent,transparent)] translate-y-1 -z-40"
+    class="absolute top-0 left-0 -z-40 h-1/2 w-1/2 translate-y-1 mask-[linear-gradient(to_bottom_right,white,transparent,transparent)]"
   />
   <DotPattern
-    class="absolute bottom-0 right-0 w-1/3 h-full mask-[linear-gradient(to_bottom_right,transparent,transparent,white)] -z-40"
+    class="absolute right-0 bottom-0 -z-40 h-full w-1/3 mask-[linear-gradient(to_bottom_right,transparent,transparent,white)]"
   />
 </div>

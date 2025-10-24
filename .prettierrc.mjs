@@ -1,3 +1,4 @@
+// @ts-check
 import config from "@lehoczky/prettier-config"
 
 /**
@@ -5,8 +6,8 @@ import config from "@lehoczky/prettier-config"
  */
 export default {
   ...config,
-  plugins: ["prettier-plugin-tailwindcss", "prettier-plugin-astro"],
-  tailwindConfig: "./tailwind.config.ts",
+  plugins: ["prettier-plugin-astro", "prettier-plugin-tailwindcss"],
+  tailwindStylesheet: "./src/assets/styles/base.css",
   tailwindFunctions: ["cn", "clsx"],
   overrides: [
     {

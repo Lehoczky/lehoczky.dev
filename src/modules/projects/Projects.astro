@@ -29,7 +29,7 @@ const { class: className, ...attrs } = Astro.props
   <section class="container py-20">
     <SectionTitle>Noteworthy Projects</SectionTitle>
 
-    <div class="grid gap-14 lg:gap-24 2xl:gap-36 project-grid">
+    <div class="grid gap-14 lg:gap-24 xl:odd:first:order-1 2xl:gap-36">
       <ProjectContainer>
         <ProjectTextContainer
           data-sal="slide-up"
@@ -162,7 +162,7 @@ const { class: className, ...attrs } = Astro.props
               <p>
                 Here is my Demo site to check it out: <Link
                   target="_blank"
-                  class="text-green-500 inline-block"
+                  class="inline-block text-green-500"
                   href="https://lehoczky.github.io/postcss-fluid/"
                   >postcss-fluid | Demo</Link
                 >
@@ -182,10 +182,10 @@ const { class: className, ...attrs } = Astro.props
         <div data-sal="slide-right" data-sal-duration="500">
           <ProjectImageLink
             href="https://github.com/Lehoczky/postcss-fluid"
-            class="lg:min-h-[402px] order-2 xl:order-[unset]"
+            class="order-2 lg:min-h-[402px] xl:order-[unset]"
           >
             <Code
-              class="p-6 border border-neutral-800 xl:text-lg rounded-lg"
+              class="rounded-lg border border-neutral-800 p-6 xl:text-lg"
               code={postcssFluidExample}
               lang={"css"}
               theme={"dark-plus"}
@@ -199,18 +199,9 @@ const { class: className, ...attrs } = Astro.props
   </section>
 
   <DotPattern
-    class="absolute top-0 left-0 w-2/5 h-full mask-[linear-gradient(to_bottom_right,white,transparent,transparent)] -z-40 -translate-y-1"
+    class="absolute top-0 left-0 -z-40 h-full w-2/5 -translate-y-1 mask-[linear-gradient(to_bottom_right,white,transparent,transparent)]"
   />
   <DotPattern
-    class="absolute bottom-0 right-0 w-1/5 h-1/2 mask-[linear-gradient(to_bottom_right,transparent,transparent,white)] -z-40"
+    class="absolute right-0 bottom-0 -z-40 h-1/2 w-1/5 mask-[linear-gradient(to_bottom_right,transparent,transparent,white)]"
   />
 </div>
-
-<style>
-  /* Alternate image and text position between rows */
-  @media screen(xl) {
-    .project-grid > :nth-child(odd) > :first-child {
-      order: 1;
-    }
-  }
-</style>
