@@ -2,6 +2,7 @@ module.exports = {
   ci: {
     collect: {
       staticDistDir: "./dist",
+      autodiscoverUrlBlocklist: ["googlec6ae8ed8a8001adc.html"],
     },
     assert: {
       assertions: {
