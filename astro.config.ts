@@ -4,10 +4,13 @@ import { defineConfig } from "astro/config"
 import { FileSystemIconLoader } from "unplugin-icons/loaders"
 import Icons from "unplugin-icons/vite"
 
+import cloudflare from "@astrojs/cloudflare";
+
 // https://astro.build/config
 export default defineConfig({
   site: "https://lehoczky.dev/",
   integrations: [vue()],
+
   vite: {
     plugins: [
       tailwindcss(),
@@ -19,4 +22,6 @@ export default defineConfig({
       }),
     ],
   },
+
+  adapter: cloudflare(),
 })
